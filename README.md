@@ -1,4 +1,4 @@
-# projet_M2_IM_XML
-Projet dans le cadre du cours de Python
-Semestre 1 (2018-2019)
-Milena Chaîne - Ferial Yahiaoui
+#Projet de traitement de données textuelles
+##Master de traitement automatique des langues, semestre 1 (2018-2019)
+##Milena Chaîne - Ferial Yahiaoui
+###Ce projet est réalisé dans le cadre de cours de XML et de langages de script
