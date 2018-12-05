@@ -1,32 +1,29 @@
-#!/usr/bin/python3
-# coding: utf-8
-## V1 POUR PROJET GROS GROS GROS CHANGEMENTS A VENIR
-## ATTENTION AUX &
-### Milena Chaîne
-### description : attend un fichier de données structuré, renvoie ces données structurées en XML
-### ex : python3 csv2xml <file_student_with_separator>
+# V1 POUR PROJET GROS GROS GROS CHANGEMENTS A VENIR
+# github.com/feryah/projet_M2_IM_XML
+# description : attend un fichier de données structuré, renvoie ces données structurées en XML
+# en gros : récupère la première ligne, la traite pour récupérer noms de balise, puis traite chaque ligne non vide, la segmente et la formate => envoie tout en XML dans nouveau fichier
+# ex : python3 csv2xml <chemin_fichier>
 
 # modules
 import sys
 import os.path
 
-
 # fonctions
 
 ## quitter si usage incorrect
-def usage(name):
-    sep = "_"*40
-    usage = "Usage correct : python3 {} <file_student_with_separator>".format(name)
+def usage(nom):
+    sep = "*"*40
+    usage = "Usage : python3 {} <fichier_a_formater>".format(nom)
     print(sep)
     print(usage)
     print(sep)
     exit()
 
-def file2array(filename):
-    """file2array attend un fichier
-    et renvoie une liste de ces lignes, sans espaces en fin de ligne
+def fichier_lignes(fic):
+    """fichier_lignes attend un fichier
+    et renvoie une liste des lignes non vides du fichier, sans espaces en fin de ligne
     """
-    with open(filename, "r") as fichier:
+    with open(fic, "r") as fichier:
     	lignes = [ligne.strip() for ligne in fichier]
     return lignes
  
@@ -77,11 +74,11 @@ def printXML2file(dataXML):
 
 # main
 ## gestion des arguments
-if((len(sys.argv) != 2) or (not(os.path.isfile(sys.argv[1])))):
+if len(sys.argv) != 2 or not os.path.isfile(sys.argv[1]):
     usage(sys.argv[0])
 
 ## contenu
 file_student = sys.argv[1]
-data = file2array(file_student)
+data = fichier_lignes(file_student)
 dataXML = array2XML(data, ";")
 printXML2file(dataXML)
