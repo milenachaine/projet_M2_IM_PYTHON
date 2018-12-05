@@ -74,7 +74,7 @@ def printXML2file(dataXML):
 
 # main
 ## gestion des arguments
-if((len(sys.argv) != 2) or (not(os.path.isfile(sys.argv[1])))):
+if len(sys.argv) != 2 or not os.path.isfile(sys.argv[1]):
     usage(sys.argv[0])
 
 ## contenu
