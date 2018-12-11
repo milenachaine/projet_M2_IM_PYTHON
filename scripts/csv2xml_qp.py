@@ -8,8 +8,8 @@
 import sys
 import extraction as e
 
-output = "../output/arrondissements.xml"
+output = "../output/qp.xml"
 e.usage(sys.argv[0], output) # gestion des arguments/aspect visuel au terminal
 
-data_XML = e.arrondissements_xml(e.lecture_csv(sys.argv[1], ";")) # traitement au format XML
-e.xml2fichier(data_XML, output, "ARRONDISSEMENTS") # envoi dans fichier
+data_XML = e.qp_xml(e.lecture_csv(sys.argv[1], ";")) # traitement au format XML
+e.xml2fichier(data_XML, output, "QP") # envoi dans fichier
