@@ -1,4 +1,4 @@
-# contexte : # github.com/(feryah/projet_M2_IM_XML|milenachaine/projet_M2_IM_PYTHON)
+# contexte : github.com/(feryah/projet_M2_IM_XML|milenachaine/projet_M2_IM_PYTHON)
 # module de fonctions liées à l'extraction et au formatage de fichiers CSV en XML
 
 import sys
@@ -69,9 +69,11 @@ def arrondissements_xml(liste):
     :return: la liste contenant les données formatées
     """
     ligne1 = [s.replace(" ", "_") for s in liste[0]]
-    liste.pop(0)
-    liste.sort(key=lambda x: int(x[1])) #le fichier original ne trie pas les arrondissements numériquement
     compteur_total = len(ligne1)
+    liste.pop(0)
+    
+    liste.sort(key=lambda x: int(x[1])) #le fichier original ne trie pas les arrondissements numériquement
+
     fichier_XML=[]
 
     for ligne in liste:
@@ -85,3 +87,30 @@ def arrondissements_xml(liste):
     return fichier_XML
 
 
+def qp_xml(liste):
+    """
+    spécifique au script qp
+    récupérer une liste de lignes formatées, les modéliser en XML
+    la première ligne est traitée à part pour récupérer les noms de balise
+    :param liste: liste de lignes
+    :return: la liste contenant les données formatées
+    """
+    ligne1 = [s.replace(" ", "_") for s in liste[0]]
+    compteur_total = len(ligne1)
+    liste.pop(0)
+
+    liste = [ligne for ligne in liste if ligne[7] == "75"] #le fichier original contient des informations sur toute l'IDF
+    liste.sort(key=lambda x: int(x[2])) #le fichier original ne trie pas les arrondissements numériquement
+
+    fichier_XML=[]
+
+    for ligne in liste:
+        fichier_XML.append("<qp id=\"{}\">".format(ligne[2]))
+        fichier_XML.append("\t<{0}>{1}</{0}>".format(ligne1[0], ligne[0]))
+        fichier_XML.append("\t<{0}>{1}</{0}>".format(ligne1[1], ligne[1]))
+        compteur = 3
+        while compteur < compteur_total:
+            fichier_XML.append("\t<{0}>{1}</{0}>".format(ligne1[compteur], ligne[compteur]))
+            compteur += 1
+        fichier_XML.append("</qp>")
+    return fichier_XML
