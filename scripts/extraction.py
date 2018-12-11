@@ -4,6 +4,8 @@
 import sys
 import os.path
 
+# -------- FONCTIONS GENERALES --------
+
 
 def usage(nom, output):
     """
@@ -60,6 +62,9 @@ def xml2fichier(data, output, racine):
         data_out.close()
 
 
+# -------- FONCTIONS SPECIFIQUES --------
+
+
 def arrondissements_xml(liste):
     """
     spécifique au script arrondissements
@@ -71,7 +76,7 @@ def arrondissements_xml(liste):
     ligne1 = [s.replace(" ", "_") for s in liste[0]]
     compteur_total = len(ligne1)
     liste.pop(0)
-    
+
     liste.sort(key=lambda x: int(x[1])) #le fichier original ne trie pas les arrondissements numériquement
 
     fichier_XML=[]
@@ -99,8 +104,8 @@ def qp_xml(liste):
     compteur_total = len(ligne1)
     liste.pop(0)
 
-    liste = [ligne for ligne in liste if ligne[7] == "75"] #le fichier original contient des informations sur toute l'IDF
-    liste.sort(key=lambda x: int(x[2])) #le fichier original ne trie pas les arrondissements numériquement
+    liste = [ligne for ligne in liste if ligne[7] == "75"] # le fichier original contient des informations sur toute l'IDF
+    liste.sort(key=lambda x: int(x[2])) # le fichier original ne trie pas les arrondissements numériquement
 
     fichier_XML=[]
 
