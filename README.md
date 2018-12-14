@@ -1,4 +1,4 @@
-# Projet dans le cadre du cours de XML
+# Projet dans le cadre d'un cours de XML et de langages de scripts (Master 2)
 ## Semestre 1 (2018-2019)
 ## Milena Chaîne - Ferial Yahiaoui
 ## Source des données :
