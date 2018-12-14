@@ -1,8 +1,10 @@
 # contexte : github.com/(feryah/projet_M2_IM_XML|milenachaine/projet_M2_IM_PYTHON)
 # module de fonctions liées à l'extraction et au formatage de fichiers CSV en XML
 
+import re
 import sys
 import os.path
+import extraction as e
 
 # -------- FONCTIONS GENERALES --------
 
@@ -29,8 +31,21 @@ def usage(nom, output):
         print(sep)
         exit()
     else:
+        print(sep)
         print("Emplacement du fichier XML en sortie : {}".format(output))
+        print(sep)
 
+
+def balise_xml(balise):
+    """
+    normalise une chaîne de caractères afin de pouvoir l'utiliser comme nom de balise XML
+    enlève notamment les espaces, les caractères de ponctuation, et les caractères potentiellement problématiques comme les accents
+    :param balise: une chaîne de caractères
+    :return: cette chaîne normalisée
+    """
+    balise = re.sub(r'[\(\)\,\;\:\.\ ]',"_", balise)
+    balise = re.sub(r'[éèê]','e',balise)
+    return balise
 
 def lecture_csv(fic, sep):
     """
@@ -73,7 +88,7 @@ def arrondissements_xml(liste):
     :param liste: liste de lignes
     :return: la liste contenant les données formatées
     """
-    ligne1 = [s.replace(" ", "_") for s in liste[0]]
+    ligne1 = [e.balise_xml(s) for s in liste[0]]
     compteur_total = len(ligne1)
     liste.pop(0)
 
@@ -100,7 +115,7 @@ def qp_xml(liste):
     :param liste: liste de lignes
     :return: la liste contenant les données formatées
     """
-    ligne1 = [s.replace(" ", "_") for s in liste[0]]
+    ligne1 = [e.balise_xml(s) for s in liste[0]]
     compteur_total = len(ligne1)
     liste.pop(0)
 
