@@ -119,3 +119,66 @@ def qp_xml(liste):
             compteur += 1
         fichier_XML.append("</qp>")
     return fichier_XML
+
+
+def hlm_paris_xml(liste):
+    """
+    spécifique au script hlm_paris
+    récupérer une liste de lignes formatées, les modéliser en XML
+    la première ligne est traitée à part pour récupérer les noms de balise
+    :param liste: liste de lignes
+    :return: la liste contenant les données formatées
+    """
+    ligne1 = [s.replace(" ", "_") for s in liste[0]]
+    compteur_total = len(ligne1)
+    liste.pop(0)
+
+    
+    liste.sort(key=lambda x: int(x[4])) #le fichier original ne trie pas les années numériquement
+
+    fichier_XML=[]
+
+    compteur_log = 1
+
+    for ligne in liste:
+        
+        fichier_XML.append("\t<annee id=\"{}\">".format(ligne[4]))
+
+
+        fichier_XML.append("\t\t<logements id=\"{}\">".format(compteur_log))
+
+
+        compteur_log += 1
+    
+        fichier_XML.append("\t\t\t<localisation>")
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[0], ligne[0]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[1], ligne[1]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[3], ligne[3]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[13], ligne[13]))
+        fichier_XML.append("\t\t\t</localisation>")
+
+        fichier_XML.append("\t\t\t<nb_par_type_logement>")
+        fichier_XML.append("\t\t\t\t<{0}>{1}".format(ligne1[6], ligne[6]))
+        fichier_XML.append("\t\t\t\t\t<{0}>{1}</{0}>".format(ligne1[7], ligne[7]))
+        fichier_XML.append("\t\t\t\t\t<{0}>{1}</{0}>".format(ligne1[8], ligne[8]))
+        fichier_XML.append("\t\t\t\t\t<{0}>{1}</{0}>".format(ligne1[9], ligne[9]))
+        fichier_XML.append("\t\t\t\t\t<{0}>{1}</{0}>".format(ligne1[10], ligne[10]))
+        fichier_XML.append("\t\t\t\t</{0}>".format(ligne1[6]))
+        fichier_XML.append("\t\t\t</nb_par_type_logement>")
+
+        fichier_XML.append("\t\t\t<realisation>")
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[5], ligne[5]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[2], ligne[2]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[11], ligne[11]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[15], ligne[15]))
+        fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[14], ligne[14]))
+        fichier_XML.append("\t\t\t</realisation>")
+
+
+        fichier_XML.append("\t\t</logements>")
+        fichier_XML.append("\t</annee>")
+
+        
+
+   
+    return fichier_XML
