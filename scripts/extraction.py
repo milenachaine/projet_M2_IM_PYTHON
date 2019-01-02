@@ -185,6 +185,7 @@ def hlm_paris_xml(liste):
 
 	for ligne in liste:
 
+
 		fichier_XML.append("\t<annee id=\"{}\">".format(ligne[4]))
 
 
