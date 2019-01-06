@@ -1,0 +1,56 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT ARRONDISSEMENTS (arrondissement)+>
+<!ATTLIST ARRONDISSEMENTS
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT arrondissement (N_SQ_AR,C_ARINSEE,L_AR,L_AROFF,N_SQ_CO,
+                          SURFACE,PERIMETRE,Geometry_X_Y,Geometry,
+                          OBJECTID,LONGUEUR)>
+<!ATTLIST arrondissement
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT N_SQ_AR (#PCDATA)>
+<!ATTLIST N_SQ_AR
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT C_ARINSEE (#PCDATA)>
+<!ATTLIST C_ARINSEE
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT L_AR (#PCDATA)>
+<!ATTLIST L_AR
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT L_AROFF (#PCDATA)>
+<!ATTLIST L_AROFF
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT N_SQ_CO (#PCDATA)>
+<!ATTLIST N_SQ_CO
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT SURFACE (#PCDATA)>
+<!ATTLIST SURFACE
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT PERIMETRE (#PCDATA)>
+<!ATTLIST PERIMETRE
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Geometry_X_Y (#PCDATA)>
+<!ATTLIST Geometry_X_Y
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Geometry (#PCDATA)>
+<!ATTLIST Geometry
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT OBJECTID (#PCDATA)>
+<!ATTLIST OBJECTID
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT LONGUEUR (#PCDATA)>
+<!ATTLIST LONGUEUR
+  xmlns CDATA #FIXED ''>

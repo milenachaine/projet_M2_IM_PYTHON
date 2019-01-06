@@ -1,0 +1,6 @@
+milena:output milena$ xmllint --valid --noout  arrondissements.xml
+milena:output milena$ xmllint --noout arrondissements.xml --relaxng arrondissements.rng
+arrondissements.xml validates
+milena:output milena$ xmllint --valid --noout qp.xml
+milena:output milena$ xmllint --noout qp.xml --relaxng qp.rng
+qp.xml validates
