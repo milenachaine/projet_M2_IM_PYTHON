@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ARRONDISSEMENTS SYSTEM "arrondissements.dtd">
 <ARRONDISSEMENTS>
 	<arrondissement id="1">
 		<N_SQ_AR>750000001</N_SQ_AR>

@@ -8,9 +8,8 @@
 import sys
 import extraction as e
 
-output = "../output/hlm_paris.xml"
+output = "../xml/qp.xml"
 e.usage(sys.argv[0], output) # gestion des arguments/aspect visuel au terminal
 
-data_XML = e.hlm_paris_xml(e.lecture_csv(sys.argv[1], ";")) # traitement au format XML
-e.xml2fichier(data_XML, output, "LOGEMENTS_SOCIAUX_PARIS") # envoi dans fichier
-
+data_XML = e.qp_xml(e.lecture_csv(sys.argv[1], ";")) # traitement au format XML
+e.xml2fichier(data_XML, output, "QP") # envoi dans fichier

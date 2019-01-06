@@ -43,19 +43,13 @@ def balise_xml(balise):
 	:param balise: une chaîne de caractères
 	:return: cette chaîne normalisée
 	"""
-	#balise = re.sub(r'[\(\)\,\;\:\.\ ]',"_", balise)
-	
+
 	balise = re.sub(r'[\(\,\;\:\.\ ]',"_", balise)
 	if '__' in balise:
 		balise = re.sub(r'__','_', balise)
 
-
 	balise = re.sub(r'[\)]','',balise)
 	balise = re.sub(r'[éèê]','e',balise)
-
-
-
-
 	return balise
 
 def contenu_balise(cont):
@@ -66,13 +60,7 @@ def contenu_balise(cont):
 	:return: cette chaîne normalisée
 	"""
 
-	
-
-	cont = re.sub(r'[&]','&amp;', cont)
-
-	#liste non exhaustive
-
-
+	cont = re.sub(r'[&]','&amp;', cont) # liste non exhaustive
 	return cont
 
 def lecture_csv(fic, sep):
