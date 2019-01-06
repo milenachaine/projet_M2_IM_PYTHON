@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="ARRONDISSEMENTS">
+      <oneOrMore>
+        <element name="arrondissement">
+          <attribute name="id">
+            <data type="integer"/>
+          </attribute>
+          <element name="N_SQ_AR">
+            <data type="integer"/>
+          </element>
+          <element name="C_ARINSEE">
+            <data type="integer"/>
+          </element>
+          <element name="L_AR">
+            <text/>
+          </element>
+          <element name="L_AROFF">
+            <data type="NCName"/>
+          </element>
+          <element name="N_SQ_CO">
+            <data type="integer"/>
+          </element>
+          <element name="SURFACE">
+            <data type="decimal"/>
+          </element>
+          <element name="PERIMETRE">
+            <data type="decimal"/>
+          </element>
+          <element name="Geometry_X_Y">
+            <text/>
+          </element>
+          <element name="Geometry">
+            <text/>
+          </element>
+          <element name="OBJECTID">
+            <data type="integer"/>
+          </element>
+          <element name="LONGUEUR">
+            <data type="decimal"/>
+          </element>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+</grammar>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QP SYSTEM "qp.dtd">
+
 <QP>
 	<qp id="200">
 		<Geo_Point>48.8747500053, 2.37067490689</Geo_Point>
