@@ -189,7 +189,7 @@ def hlm_paris_xml(liste):
 		fichier_XML.append("\t<annee id=\"{}\">".format(ligne[4]))
 
 
-		fichier_XML.append("\t\t<logements id=\"{}\">".format(compteur_log))
+		fichier_XML.append("\t\t<logement id=\"{}\">".format(compteur_log))
 		compteur_log += 1
 
 	
@@ -218,7 +218,7 @@ def hlm_paris_xml(liste):
 		fichier_XML.append("\t\t\t</realisation>")
 
 
-		fichier_XML.append("\t\t</logements>")
+		fichier_XML.append("\t\t</logement>")
 
 		fichier_XML.append("\t</annee>")
 
