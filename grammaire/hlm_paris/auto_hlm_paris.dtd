@@ -1,0 +1,90 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT LOGEMENTS_SOCIAUX_PARIS (annee)+>
+<!ATTLIST LOGEMENTS_SOCIAUX_PARIS
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT annee (logement)>
+<!ATTLIST annee
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT logement (localisation,nb_par_type_logement,realisation)>
+<!ATTLIST logement
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT localisation (Geo_Point,Geo_Shape,
+                        Adresse_Denomination_operation,Arrondissements)>
+<!ATTLIST localisation
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT nb_par_type_logement (Nombre_total_de_logements_finances)>
+<!ATTLIST nb_par_type_logement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT realisation (Bailleur_social,Numero_Operation,
+                       Mode_de_realisation,Coord_X_LB93,
+                       Nature_de_programme)>
+<!ATTLIST realisation
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Geo_Point (#PCDATA)>
+<!ATTLIST Geo_Point
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Geo_Shape (#PCDATA)>
+<!ATTLIST Geo_Shape
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Adresse_Denomination_operation (#PCDATA)>
+<!ATTLIST Adresse_Denomination_operation
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Arrondissements (#PCDATA)>
+<!ATTLIST Arrondissements
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Nombre_total_de_logements_finances (#PCDATA
+                                              |dont_nombre_de_logements_PLA_I
+                                              |dont_nombre_de_logements_PLS
+                                              |dont_nombre_de_logements_PLUS
+                                              |dont_nombre_de_logements_PLUS_CD)*>
+<!ATTLIST Nombre_total_de_logements_finances
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Bailleur_social (#PCDATA)>
+<!ATTLIST Bailleur_social
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Numero_Operation (#PCDATA)>
+<!ATTLIST Numero_Operation
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Mode_de_realisation (#PCDATA)>
+<!ATTLIST Mode_de_realisation
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Coord_X_LB93 (#PCDATA)>
+<!ATTLIST Coord_X_LB93
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Nature_de_programme (#PCDATA)>
+<!ATTLIST Nature_de_programme
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dont_nombre_de_logements_PLA_I (#PCDATA)>
+<!ATTLIST dont_nombre_de_logements_PLA_I
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dont_nombre_de_logements_PLS (#PCDATA)>
+<!ATTLIST dont_nombre_de_logements_PLS
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dont_nombre_de_logements_PLUS (#PCDATA)>
+<!ATTLIST dont_nombre_de_logements_PLUS
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dont_nombre_de_logements_PLUS_CD (#PCDATA)>
+<!ATTLIST dont_nombre_de_logements_PLUS_CD
+  xmlns CDATA #FIXED ''>

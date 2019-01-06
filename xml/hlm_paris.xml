@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LOGEMENTS_SOCIAUX_PARIS SYSTEM "hlm_paris.dtd">
 <LOGEMENTS_SOCIAUX_PARIS>
 		<annee id="2001">
 			<logements id="1">

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="LOGEMENTS_SOCIAUX_PARIS">
+      <oneOrMore>
+        <element name="annee">
+          <attribute name="id">
+            <data type="integer"/>
+          </attribute>
+          <element name="logement">
+            <attribute name="id">
+              <data type="integer"/>
+            </attribute>
+            <element name="localisation">
+              <element name="Geo_Point">
+                <text/>
+              </element>
+              <element name="Geo_Shape">
+                <text/>
+              </element>
+              <element name="Adresse_Denomination_operation">
+                <text/>
+              </element>
+              <element name="Arrondissements">
+                <data type="integer"/>
+              </element>
+            </element>
+            <element name="nb_par_type_logement">
+              <element name="Nombre_total_de_logements_finances">
+                <oneOrMore>
+                  <choice>
+                    <text/>
+                    <element name="dont_nombre_de_logements_PLA_I">
+                      <data type="integer"/>
+                    </element>
+                    <element name="dont_nombre_de_logements_PLS">
+                      <data type="integer"/>
+                    </element>
+                    <element name="dont_nombre_de_logements_PLUS">
+                      <data type="integer"/>
+                    </element>
+                    <element name="dont_nombre_de_logements_PLUS_CD">
+                      <data type="integer"/>
+                    </element>
+                  </choice>
+                </oneOrMore>
+              </element>
+            </element>
+            <element name="realisation">
+              <element name="Bailleur_social">
+                <text/>
+              </element>
+              <element name="Numero_Operation">
+                <data type="decimal"/>
+              </element>
+              <element name="Mode_de_realisation">
+                <text/>
+              </element>
+              <element name="Coord_X_LB93">
+                <data type="decimal"/>
+              </element>
+              <element name="Nature_de_programme">
+                <text/>
+              </element>
+            </element>
+          </element>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+</grammar>
