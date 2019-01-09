@@ -1,5 +1,7 @@
 # contexte : github.com/(feryah/projet_M2_IM_XML|milenachaine/projet_M2_IM_PYTHON)
+# Milena Chaîne / Ferial Yahiaoui
 # module de fonctions liées à l'extraction et au formatage de fichiers CSV en XML
+# il est utilisé par chaque programme qui transforme un fichier CSV en fichier XML
 
 import re
 import sys
@@ -168,19 +170,15 @@ def hlm_paris_xml(liste):
 
 	fichier_XML=[]
 
-
 	compteur_log = 1
 
 	for ligne in liste:
 
-
 		fichier_XML.append("\t<annee id=\"{}\">".format(ligne[4]))
-
 
 		fichier_XML.append("\t\t<logement id=\"{}\">".format(compteur_log))
 		compteur_log += 1
 
-	
 		fichier_XML.append("\t\t\t<localisation>")
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[0], e.contenu_balise(ligne[0])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[1], e.contenu_balise(ligne[1])))
@@ -205,13 +203,8 @@ def hlm_paris_xml(liste):
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[14], e.contenu_balise(ligne[14])))
 		fichier_XML.append("\t\t\t</realisation>")
 
-
 		fichier_XML.append("\t\t</logement>")
 
 		fichier_XML.append("\t</annee>")
 
-
-		
-
-   
 	return fichier_XML
