@@ -56,9 +56,6 @@
               <element name="Mode_de_realisation">
                 <text/>
               </element>
-              <element name="Coord_X_LB93">
-                <data type="decimal"/>
-              </element>
               <element name="Nature_de_programme">
                 <text/>
               </element>

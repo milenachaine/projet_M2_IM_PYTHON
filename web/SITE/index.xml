@@ -6,10 +6,40 @@
 <index>
     <name>Accueil</name>
     <about>
-        <explication>I Descriptif du projet
-Exploration thématique : Le but de ce projet est d’étudier une thématique choisie par vous, et plus particulièrement de répondre à une problématique émergente sur ce thème. Vous êtes amené à construire un site web statique qui servira à la présentation de vos données de travail. Le projet total est noté sur 50 pts.
-Le type des données d’entrée est libre (csv, xml, json, html ...) l’important est d’établir une corrélation entre ces données qui vous aidera à répondre à la problématique. Pour cela on utilisera XML comme pivot pour modéliser les données.
-Le site web en sortie sera présenté sous le format de deux pages principales connectées ayant les ca- ractéristiques suivantes :</explication>
+        <explication> Descriptif du projet :
+
+          Pour le projet que nous devons réaliser pour le cours d'XML, nous nous sommes intéressées à la politique du logement sociale en France et plus particulièrement à celle à Paris. Pour ce faire, nous avons, d'une part, recueilli des données à partir du site Internet Open Data de la Ville de Paris https://opendata.paris.fr/page/home/ donnant accès à l'ensemble des jeux de données publiés par les services de la Ville et ses partenaires. D'autre part, à partir de la plateforme de diffusion de données publiques de l'État français https://www.data.gouv.fr/en/datasets/logements-sociaux-finances-a-paris/</explication>
+
+          <explication>Les fichiers en question sont au nombre de 3 et représentent : 
+          </explication>
+          <explication> 1. Inventaire des logements sociaux financés à Paris entre 2001 et 2017, par arrondissement, par année, par maître d’ouvrage, par nombre de logements, par nature de programme, par catégorie de financement et par mode de réalisation dont la source se trouve ici https://www.data.gouv.fr/en/datasets/logements-sociaux-finances-a-paris/.</explication>
+          <explication>Le site fourni également les détails suivants : </explication>
+
+          <explication>Les logements sociaux se différencient notamment par : </explication>
+
+
+          <explication> > Catégorie de financement : </explication>
+ <explication>- Les logements PLA I (Prêt locatif aidé d’intégration) sont des logements très sociaux pour les personnes ayant des difficultés particulières d’accès au logement. Ils comprennent notamment des logements d’insertion gérés par des associations pour l’hébergement des personnes défavorisées. </explication>
+<explication>- Les logements PLUS (Prêt locatif à usage social) correspondent aux logements sociaux classiques.</explication>
+<explication>- Les logements PLS (Prêt locatif social) sont des logements sociaux de type intermédiaire, destinés notamment aux classes moyennes et accessibles sous des plafonds de ressources qui couvrent trois ménages parisiens sur quatre.</explication>
+
+ <explication> > Mode de réalisation : </explication>
+ <explication>- la construction neuve </explication>
+<explication> - l’acquisition suivie d’une réhabilitation lourde et de la restructuration d’immeubles assimilable à de la construction neuve. </explication>
+<explication> - l’acquisition et le conventionnement en logement social avec pas ou peu de travaux. </explication>
+
+<explication> > Année d’agrément : il s’agit de la décision administrative par laquelle la collectivité compétente donne son accord pour le financement d’une opération de logement social</explication>
+
+<explication>Ce fichier est au format CSV et sa taille est de 787 Ko et comporte 90668 tokens. </explication>
+
+<explication></explication>
+
+
+
+<explication> Vous d ́etaillerez cette  ́etape dans votre page web explicative. ⇒ D ́etail du corpus avec par exemple : — taille initiale (Mo/Go ? Nombre de mots ? nombre de balises (xml) ? colonnes/lignes (csv) ?),
+— taille finale apr`es traitement (idem),
+— % de perte si il y a lieu lors du traitement,
+—  ́echelle de temps, — type de donn ́ees.</explication>
         <explication>II
 — Un fichier.html présentant votre projet et généré grâce à une feuille de style xslt (processeur saxon) mais qui contiendra le descriptif :
 — Du thème et de vos données,

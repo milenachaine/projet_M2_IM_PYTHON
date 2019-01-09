@@ -199,7 +199,6 @@ def hlm_paris_xml(liste):
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[5], e.contenu_balise(ligne[5])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[2], e.contenu_balise(ligne[2])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[11], e.contenu_balise(ligne[11])))
-		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[15], e.contenu_balise(ligne[15])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[14], e.contenu_balise(ligne[14])))
 		fichier_XML.append("\t\t\t</realisation>")
 

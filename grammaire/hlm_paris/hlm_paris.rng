@@ -32,7 +32,6 @@
                                 <element name="Bailleur_social"><text/></element>
                                 <element name="Numero_Operation"><text/></element>
                                 <element name="Mode_de_realisation"><text/></element>
-                                <element name="Coord_X_LB93"><text/></element>
                                 <element name="Nature_de_programme"><text/></element>
                             </element>
     

@@ -145,21 +145,37 @@
           <meta name="keywords" content="" />
           <meta name="explication" content="" />
           <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+
           <link href="projet.css" rel="stylesheet" type="text/css" media="all" />
-          
-
-          <style type="text/css">
-        
-        #map_canvas {
-            height: 200px;
-            width: 350px;
-            margin:50px auto;
-        }
-        </style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
-        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+   <!-- cartes -->
+       
+  <script type="text/javascript">
 
+
+      google.charts.load('upcoming', {packages:['map']});
+      google.charts.setOnLoadCallback(drawChart);
+
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [37.4232, -122.0853, 'Work'],
+          [37.4289, -122.1697, 'University'],
+          [37.6153, -122.3900, 'Airport'],
+          [37.4422, -122.1731, 'Shopping']
+        ]);
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {
+          showTooltip: true,
+          showInfoWindow: true
+        });
+      }
+    </script>
+       
 
       </head>
 
@@ -184,23 +200,12 @@
                     <div class="content">
                         <xsl:for-each select="//explication">
                             <p><xsl:value-of select="text()"/></p>
-                                <div id="map_canvas"></div>
-    <script type="text/javascript">
-      (function() {
-        var latlng = new google.maps.LatLng(31.119492, 121.369738),
-            map    = new google.maps.Map(document.getElementById("map_canvas"), {
-          zoom: 15,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          mapTypeControl: false
-        });
-        new google.maps.Marker({
-          map: map,
-          position: latlng,
-          title: 'halo'
-        });
-      })();
-    </script>
+                                
+                              
+
+                                  
+<div id="map_div" style="width: 400px; height: 300px"></div>
+  
                         </xsl:for-each>
                     </div>
                 </div>
