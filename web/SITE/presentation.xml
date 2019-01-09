@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="introduction_presentation.xsl"?>
+
+
+
+<presentation>
+    <name>Présentation des données &amp; résultats</name>
+    <about>
+        <explication>Cette partie comprend deux étapes, la transformation de vos données puis l’utilisation de celles-ci dans votre site web.
+Comme mentionné (cf supra) votre site web se composera à minima de deux pages web, la première étant un récapitulatif de votre projet (résultat d’une transformation xslt).
+La seconde se présentera sous forme de tableau (avec en-tête explicative) et permettra d’accéder à toutes vos données de travail y compris les modélisations que vous aurez choisi pour présenter vos résultats.
+2
+tableau.html
+explication.html
+fichier(s).css
+fichier(s).js
+Attention :
+— Le choix de représentation doit illustrer votre approche pour répondre à la problématique que vous
+vous êtes posée.
+— L’utilisation d’éléments techniques vus en cours (entités, etc) est un plus dans la notation.</explication>
+        
+    </about>
+    <contact>
+      <master nom="Traitement Automatique des Langues">
+          <cours intitulé="XML" année="2018-2019"/>
+      </master>
+      <auteur nom="Milena Chaîne  &amp; Ferial Yahiaoui" université="Inalco" adresse="milena.chaine@gmail.com - ferial.yahiaoui13@gmail.com"/>
+    </contact>
+</presentation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="introduction_presentation.xsl"?>
+
+
+
+<visualisation>
+    <name>Visualisation : représnetation géographique </name>
+    <about>
+        <explication>Attention :
+— Le choix de représentation doit illustrer votre approche pour répondre à la problématique que vous
+vous êtes posée.
+— L’utilisation d’éléments techniques vus en cours (entités, etc) est un plus dans la notation..</explication>
+  
+    </about>
+    <contact>
+      <master nom="Traitement Automatique des Langues">
+          <cours intitulé="XML" année="2018-2019"/>
+      </master>
+      <auteur nom="Milena Chaîne  &amp; Ferial Yahiaoui" université="Inalco" adresse="milena.chaine@gmail.com - ferial.yahiaoui13@gmail.com"/>
+    </contact>
+</visualisation>
