@@ -5,7 +5,7 @@ Ce projet a été réalisé dans le cadre du [master TAL à l'INALCO](http://www
 Il s'agissait d'explorer une thématique précise en exploitant des données structurées au format XML, puis de présenter une visualisation de ces données dans un site Web statique. Nous avons choisi de nous intéresser à la problématique du logement social sur Paris, et avons choisi d'exploiter des données créées par la Mairie de Paris, ainsi que la région Île-de-France.
 
 ## Sources des données exploitées
-- [Logements sociaux financés à Paris (2001-2017)](http://www.data.gouv.fr/fr/datasets/logements-sociaux-finances-a-paris-prs/)
+- [Logements sociaux financés à Paris (2001-2017)](http://www.data.gouv.fr/fr/datasets/logements-sociaux-finances-a-paris/)
 - [Quartiers prioritaires de la politique de la ville (Paris)](http://www.data.iledefrance.fr/explore/dataset/qp-politiquedelaville-shp/)
 - [Arrondissements parisiens](http://www.data.gouv.fr/fr/datasets/arrondissements-1/)
 
