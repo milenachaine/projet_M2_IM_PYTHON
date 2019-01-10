@@ -13,50 +13,113 @@
             <div id="logo"><img src="../css/xml_logo.png" alt="logo" class="logo"></img><h1>Présentation des données &amp; résultats</h1>
             </div>
             <section id="onglets_milena_ferial">
-               <aside><a href="index.xml">Accueil</a><a href="presentation.xml">Présentation</a><a href="visualisation.xml">Visualisation</a></aside>
+               <aside><a href="index.html">Accueil</a><a href="presentation.html">Présentation</a><a href="visualisation.html">Visualisation</a></aside>
             </section>
          </div>
       </div>
       <div class="wrapper">
          <div class="content">
-            <p>Cette page présente le processus que nous avons employé pour rendre nos données exploitables.
-               Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données.
-               
-            </p>
+            <table>
+               <tr>
+                  <td class="table">
+                     <p>Cette page présente le processus que nous avons employé pour rendre nos données exploitables.
+                        Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données.
+                        
+                     </p>
+                  </td>
+               </tr>
+            </table>
             <h2>Nettoyage des données</h2>
-            <p>Pour nettoyer nos données, nous avons défini des fonctions en langage Python3 lors
-               de la transformation en XML dans le but de normaliser les chaînes de caractères afin
-               de pouvoir les utiliser dans le contenu récupéré. Cela consistait notamment par le
-               remplacement de certains caractères par leurs références d’entités html.
-               D’autres fonctions consistaient en la normalisation de chaînes de caractères afin
-               de pouvoir les utiliser comme nom de balise XML. Cela se concrétise par le remplacement
-               des espaces par des "_" ou toute autre ponctuation retrouvée dans les noms de colonnes
-               par le même caractère. Par ailleurs, nous avons remplacé les caractères diacrités
-               par leurs équivalents non diacrités.
-               
-               Il faut souligner que le fichier de données initial « hlm_paris.csv » était bruité
-               et que nous avons dû remplacer manuellement avec un éditeur de texte certains  ";"
-               qui, dans ce cas-là, n’étaient pas utilisés comme séparateurs de colonnes (csv) mais
-               comme simples ponctuations. Cet usage faussait les données décalait certaines données
-               dans les mauvaises colonnes. Nous détaillerons plus bas comment nous nous en sommes
-               rendues compte car, comme ça ne concernait que certaines données, il était difficile
-               de remarquer à première vue.
-            </p>
+            <table>
+               <tr>
+                  <td class="table">
+                     <p>Pour nettoyer nos données, nous avons défini des fonctions en langage Python3 lors
+                        de la transformation en XML dans le but de normaliser les chaînes de caractères afin
+                        de pouvoir les utiliser dans le contenu récupéré. Cela consistait notamment par le
+                        remplacement de certains caractères par leurs références d’entités html.
+                        D’autres fonctions consistaient en la normalisation de chaînes de caractères afin
+                        de pouvoir les utiliser comme nom de balise XML. Cela se concrétise par le remplacement
+                        des espaces par des "_" ou toute autre ponctuation retrouvée dans les noms de colonnes
+                        par le même caractère. Par ailleurs, nous avons remplacé les caractères diacrités
+                        par leurs équivalents non diacrités.
+                        
+                        Il faut souligner que le fichier de données initial « hlm_paris.csv » était bruité
+                        et que nous avons dû remplacer manuellement avec un éditeur de texte certains  ";"
+                        qui, dans ce cas-là, n’étaient pas utilisés comme séparateurs de colonnes (csv) mais
+                        comme simples ponctuations. Cet usage faussait les données décalait certaines données
+                        dans les mauvaises colonnes. Nous détaillerons plus bas (cf.Grammaire) comment nous
+                        nous en sommes rendues compte car, comme ça ne concernait que certaines données, il
+                        était difficile de remarquer à première vue.
+                        
+                        Pour plus de détails, les scripts sont commentés et contiennent les informations nécessaires.
+                     </p>
+                  </td>
+               </tr>
+            </table>
             <h2>Modélisation des données</h2>
-            <p>En ce qui concerne le fichier sur les quartiers prioritaires (qp.csv), le script Python
-               correspondant permet d'extraire les quartiers de Paris dans un fichier qui traite
-               toute l'Île-de-France, puis il associe le numéro du quartier (colonne OBJECTID) à
-               l'identifiant de la balise XML qui définit chaque quartier.
-            </p>
-            <p>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement
-               principal dans la modélisation est la transformation de la colonne définissant le
-               numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.
-            </p>
+            <table>
+               <tr>
+                  <td class="table">
+                     <p>Pour le fichier hlm_paris.csv, nous avons choisi une modélisation répondant à une
+                        problématique qui est la suivante :
+                        - Quelle est l’évolution chronologique du financement du logement social à Paris ?
+                        Comment les différentes catégories de financement du logement social à Paris ont été
+                        réparties à travers la période 2001 - 2017 ?
+                        Comment se représente l’évolution chronologique du financement du logement social
+                        dans les arrondissements dits bourgeois et dans les arrondissements dits populaires
+                        ?
+                        Pour ce faire, nous avons créé une hiérarchie dans le modèle XML que nous voulions
+                        obtenir qui n’était pas identique à celle du fichier CSV original. En effet, comme
+                        mentionné dans la présentation du projet, nous n’avons par gardé les deux dernières
+                        colonnes car elle n’était pas pertinente pour notre travail. Par ailleurs, nous avons
+                        créé des balises afin de contenir les noms de balises extraits à partir des noms de
+                        colonnes. Ces balises sont :
+                        &lt;annee id="20XX"&gt;  qui  récupère comme identifiant l’année de financement  et    
+                        qui contient la balise &lt;logement id="X"&gt;  qui elle-même contient &lt;localisation&gt;  
+                        qui comprend les 4 balises extraites des des noms de colonnes représentant les   
+                        informations sur la géolocalisation, l’adresse et l’arrondissement.
+                        
+                        Au même niveau de &lt;localisation&gt;, il y a les deux balises &lt;nb_par_type_logement&gt; ainsi
+                        que &lt;realisation&gt;. La première récupère les balises extraites des noms de colonnes
+                        et le contenu concernant le détail sur le nombre de logements sociaux financés tandis
+                        que la deuxième récupère les balises extraites des noms de colonnes ainsi que les
+                        informations sur la réalisation de ce financement.
+                        Notons que le fichier a bien été validé par le logiciel oXygen et que c’est un document
+                        bien formé.
+                     </p>
+                     <p>En ce qui concerne le fichier sur les quartiers prioritaires (qp.csv), le script Python
+                        correspondant permet d'extraire les quartiers de Paris dans un fichier qui traite
+                        toute l'Île-de-France, puis il associe le numéro du quartier (colonne OBJECTID) à
+                        l'identifiant de la balise XML qui définit chaque quartier.
+                     </p>
+                     <p>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement
+                        principal dans la modélisation est la transformation de la colonne définissant le
+                        numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.
+                     </p>
+                  </td>
+               </tr>
+            </table>
             <h2>Validation des fichiers</h2>
-            <p>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier.
-               Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités
-               qui n'étaient pas visibles à l'oeil nu.
-            </p>
+            <table>
+               <tr>
+                  <td class="table">
+                     <p>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier.
+                        Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités
+                        qui n'étaient pas visibles à l'oeil nu.
+                        Pour cette partie, pour le fichier hlm_paris.xml, nous avons recouru à deux types
+                        de grammaires. La première était une DTD établie manuellement et une générée automatiquement
+                        grâce au logiciel oXygen. Les deux schémas  ont bien validé notre fichier XML en les
+                        associant à ce dernier. La seconde était une grammaire RelaxNG établie manuellement
+                        et une générée automatiquement grâce au logiciel oXygen également. Lors de la validation
+                        de notre fichier XML par les deux schémas RelaxNG, nous nous sommes rendues compte
+                        que le fichier initial CSV était bruité comme évoqué dans la partie « Nettoyage de
+                        données ». Cette découverte a été suscitée notamment par la contrainte du type de
+                        données de certaines balises particulièrement &lt;Arrondissements&gt; qui n’autorisait comme
+                        contenu que des entiers (cf. rapport.txt dans le répertoire grammaire).
+                     </p>
+                  </td>
+               </tr>
+            </table>
          </div>
       </div>
       <h2>Tableau des données </h2>

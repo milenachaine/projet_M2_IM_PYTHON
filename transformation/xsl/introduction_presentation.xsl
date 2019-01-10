@@ -23,18 +23,23 @@
                         </div>
                         <section id = "onglets_milena_ferial">
                           <aside>
-                          <a href="index.xml">Accueil</a>
-                          <a href="presentation.xml">Présentation</a>
-                          <a href="visualisation.xml">Visualisation</a>
+                          <a href="index.html">Accueil</a>
+                          <a href="presentation.html">Présentation</a>
+                          <a href="visualisation.html">Visualisation</a>
                           </aside>
                         </section>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="content">
+                      <table><tr>
+                        <td class="table">
+                          <xsl:for-each select="//about">
                         <xsl:for-each select="//explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
+                      </xsl:for-each>
+                    </td></tr></table>
                     </div>
                 </div>
                 <div id ="footer-wrapper">
@@ -75,30 +80,42 @@
                         </div>
                         <section id = "onglets_milena_ferial">
                           <aside>
-                          <a href="index.xml">Accueil</a>
-                          <a href="presentation.xml">Présentation</a>
-                          <a href="visualisation.xml">Visualisation</a>
+                          <a href="index.html">Accueil</a>
+                          <a href="presentation.html">Présentation</a>
+                          <a href="visualisation.html">Visualisation</a>
                           </aside>
                         </section>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="content">
+                      <table><tr>
+                        <td class="table">
                         <xsl:for-each select="//about/explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
+                                            </td></tr></table>
                         <h2>Nettoyage des données</h2>
+                        <table><tr>
+                          <td class="table">
                         <xsl:for-each select="//nettoyage/explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
+                                            </td></tr></table>
                         <h2>Modélisation des données</h2>
+                        <table><tr>
+                          <td class="table">
                         <xsl:for-each select="//modelisation/explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
+                                            </td></tr></table>
                         <h2>Validation des fichiers</h2>
+                        <table><tr>
+                          <td class="table">
                         <xsl:for-each select="//validation/explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
+                                            </td></tr></table>
 
 
                     </div>
@@ -174,9 +191,9 @@
                         </div>
                         <section id = "onglets_milena_ferial">
                           <aside>
-                          <a href="index.xml">Accueil</a>
-                          <a href="presentation.xml">Présentation</a>
-                          <a href="visualisation.xml">Visualisation</a>
+                          <a href="index.html">Accueil</a>
+                          <a href="presentation.html">Présentation</a>
+                          <a href="visualisation.html">Visualisation</a>
                           </aside>
                         </section>
                     </div>
@@ -199,23 +216,23 @@
             <td><a href="../js/carte.html">Répartition des quartiers prioritaires</a></td>
             <td>Représentation visuelle de la répartition des quartiers prioritaires de la politique de la ville par arrondissement parisien. La taille des cercles correspond au nombre de quartiers.</td>
           </tr><tr>
-            <td><a href="../js/pie_qp_paris.html">Nombre de quartiers prioritaires parisiens par arrondissements</a></td>
+            <td><a href="../js/pie_qp_paris.html">Nombre de quartiers prioritaires parisiens par arrondissement</a></td>
             <td>Equivalent de la représentation géographique sous forme de graphe.</td>
             </tr><tr>
             <td><a href="../js/combo_evol_chro_hlm.html">Catégorie de financement des logements sociaux à Paris : 2010 - 2016</a></td>
-            <td>Analyse de la répartition des catégories des logements financés</td>
+            <td>Analyse de la répartition des catégories des logements financés.</td>
             </tr><tr>
             <td><a href="../js/histog_evol_hlm.html">Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017</a></td>
-            <td>Analyse du nombre moyen de logements sociaux financés par intervention (une intervention correspondant à un site géographique)</td>
+            <td>Analyse du nombre moyen de logements sociaux financés par intervention (une intervention correspondant à un site géographique).</td>
           </tr><tr>
             <td><a href="../js/lines_16_18_chrono.html">Évolution chronologique des logements sociaux financés dans les 16e et 18e arrondissements de Paris</a></td>
-            <td>Comparaison du nombre de logements sociaux financés par année dans un arrondissement avec peu de quartiers prioritaires (16ème) et une arrondissement en comportant beaucoup (18ème)</td>
+            <td>Comparaison du nombre de logements sociaux financés par année dans un arrondissement avec peu de quartiers prioritaires (16ème) et un arrondissement en comportant beaucoup (18ème).</td>
             </tr><tr>
             <td><a href="../js/pie_2008_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2008</a></td>
-            <td>Le choix de l'année 2008 s'explique par le fait que c'est l'année durant laquelle il y a eu le moins de financements</td>
+            <td>Le choix de l'année 2008 s'explique par le fait que c'est l'année durant laquelle il y a eu le moins de financements.</td>
             </tr><tr>
             <td><a href ="../js/pie_2016_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2016</a></td>
-            <td>Le choix de l'année 2016 s'explique par le fait que c'est l'année durant laquelle il y a eu le plus de financements</td>
+            <td>Le choix de l'année 2016 s'explique par le fait que c'est l'année durant laquelle il y a eu le plus de financements.</td>
           </tr>
         </table>
               <div id="top_x_div" style="width: 900px; height: 700px;"></div>
