@@ -3,7 +3,7 @@
 # description : ce programme attend un fichier de données structuré en CSV
 # il renvoie ces données structurées au format XML
 # ce script est adapté au traitement d'un fichier spécifique (cf. fichier), ici, arrondissements.csv
-# ex : python3 csv2xml <chemin_fichier>
+# ex : python3 csv2xml_qp.py <chemin_fichier>
 # extraction est le module présent dans extraction.py
 
 # modules
