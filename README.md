@@ -6,7 +6,7 @@ Il s'agissait d'explorer une thématique précise en exploitant des données str
 
 ## Sources des données exploitées
 - [Logements sociaux financés à Paris (2001-2017)](http://www.data.gouv.fr/fr/datasets/logements-sociaux-finances-a-paris/)
-- [Quartiers prioritaires de la politique de la ville (Paris)](http://www.data.iledefrance.fr/explore/dataset/qp-politiquedelaville-shp/)
+- [Quartiers prioritaires de la politique de la ville (Paris)](http://data.iledefrance.fr/explore/dataset/qp-politiquedelaville-shp/)
 - [Arrondissements parisiens](http://www.data.gouv.fr/fr/datasets/arrondissements-1/)
 
 ## Arborescence du projet
