@@ -8,7 +8,7 @@
     <about>
         <explication> Descriptif du projet :
 
-          Pour le projet que nous devions réaliser pour le cours d'XML, nous nous sommes intéressées à la politique du logement social en France et plus particulièrement à celle à Paris. Pour ce faire, nous avons, d'une part, recueilli des données à partir du site Internet Open Data de la Ville de Paris https://opendata.paris.fr/page/home/ donnant accès à l'ensemble des jeux de données publiés par les services de la Ville et ses partenaires. D'autre part, à partir de la plateforme de diffusion de données publiques de l'État français https://www.data.gouv.fr/en/datasets/logements-sociaux-finances-a-paris/</explication>
+          Pour le projet que nous devions réaliser pour le cours d'XML, nous nous sommes intéressées à la politique du logement social en France et plus particulièrement à celle à Paris. Quelle est la répartition géographique des investissements dans le logement social parisien ? Peut-on observer une évolution de cette répartition d'un point de vue chronologique ? Pour mener ces observations, nous avons, d'une part, recueilli des données à partir du site Internet Open Data de la Ville de Paris https://opendata.paris.fr/page/home/ donnant accès à l'ensemble des jeux de données publiés par les services de la Ville et ses partenaires. D'autre part, à partir de la plateforme de diffusion de données publiques de l'État français https://www.data.gouv.fr/en/datasets/logements-sociaux-finances-a-paris/</explication>
 
           <explication>Les fichiers en question sont au nombre de 3 et représentent :
           </explication>
@@ -45,25 +45,6 @@
 
 <explication>3. Représentation géographique des arrondissements parisiens. https://www.data.gouv.fr/fr/datasets/arrondissements-1/. Ce fichier comporte simplement les informations de géolocalisation des arrondissements parisiens. Il comporte 10350 tokens et sa taille est de 205 Ko. Il comporte 12 colonnes et 22 lignes. Après la modélisation XML, le fichier fait 211 Ko et 30808 tokens.</explication>
 
-
-<explication> Vous détaillerez cette  ́etape dans votre page web explicative. ⇒ D ́etail du corpus avec par exemple : — taille initiale (Mo/Go ? Nombre de mots ? nombre de balises (xml) ? colonnes/lignes (csv) ?),
-— taille finale apr`es traitement (idem),
-— % de perte si il y a lieu lors du traitement,
-—  ́echelle de temps, — type de donn ́ees.</explication>
-        <explication>II
-— Un fichier.html présentant votre projet et généré grâce à une feuille de style xslt (processeur saxon) mais qui contiendra le descriptif :
-— Du thème et de vos données,
-— Des méthodes utilisées pour chacune des étapes (cf infra),
-— Des résultats, des difficultés rencontrées (ce passage peut aussi être abordé dans les méthodes), une critique constructive de votre travail (améliorations possibles, avantages/inconvénients, ... etc),
-— Un fichier.html contenant un tableau html permettant par le biais de liens de consulter toutes les données du projet.
-Ce projet se découpe en quatre étapes :</explication>
-<explication>1. Structuration de l’environnement de travail, récupération des données et pré-traitement de celles-ci
-⇒ (10 pts)
-2. Analyse et sélection des données pertinentes, modélisation XML ⇒ (10 pts)
-3. E ́tablissement d’une grammaire de validation (dtd/relaxng) ⇒ (10 pts)
-4. Formatage des données et transformation pour le tableau web après création de celui-ci ⇒ (20 pts)
-Chacune des étapes va être décrite ci-dessous.
-</explication>
     </about>
     <contact>
       <master nom="Traitement Automatique des Langues">

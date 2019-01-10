@@ -6,20 +6,15 @@
 <presentation>
     <name>Présentation des données &amp; résultats</name>
     <about>
-        <explication>Cette partie comprend deux étapes, la transformation de vos données puis l’utilisation de celles-ci dans votre site web.
-Comme mentionné (cf supra) votre site web se composera à minima de deux pages web, la première étant un récapitulatif de votre projet (résultat d’une transformation xslt).
-La seconde se présentera sous forme de tableau (avec en-tête explicative) et permettra d’accéder à toutes vos données de travail y compris les modélisations que vous aurez choisi pour présenter vos résultats.
-2
-tableau.html
-explication.html
-fichier(s).css
-fichier(s).js
-Attention :
-— Le choix de représentation doit illustrer votre approche pour répondre à la problématique que vous
-vous êtes posée.
-— L’utilisation d’éléments techniques vus en cours (entités, etc) est un plus dans la notation.</explication>
-        
+        <explication>Cette page présente le processus que nous avons employé pour rendre nos données exploitables. Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données. </explication>
+
     </about>
+    <titre>Nettoyage des données</titre>
+    <titre>Modélisation des données</titre>
+    <explication>En ce qui concerne le fichier sur les quartiers prioritaires (qp.csv), le script Python correspondant permet d'extraire les quartiers de Paris dans un fichier qui traite toute l'Île-de-France, puis il associe le numéro du quartier (colonne OBJECTID) à l'identifiant de la balise XML qui définit chaque quartier.</explication>
+    <explication>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement principal dans la modélisation est la transformation de la colonne définissant le numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.</explication>
+    <titre>Validation des fichiers</titre>
+    <explication>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier. Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités qui n'étaient pas visibles à l'oeil nu.</explication>
     <contact>
       <master nom="Traitement Automatique des Langues">
           <cours intitulé="XML" année="2018-2019"/>

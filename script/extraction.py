@@ -56,7 +56,7 @@ def balise_xml(balise):
 
 def contenu_balise(cont):
 	"""
-	normalise une chaîne de caractères afin de pouvoir l'utiliser comme contenu de balise et rendre le fichier xml valide
+	normalise une chaîne de caractères afin de pouvoir l'utiliser comme contenu et rendre le fichier xml valide
 	remplace certains caractères par leurs références d'entité. Exemple : & --> &amp;
 	:param balise: une chaîne de caractères
 	:return: cette chaîne normalisée
@@ -162,7 +162,7 @@ def hlm_paris_xml(liste):
 	la première ligne est traitée à part pour récupérer les noms de balise
 	:param liste: liste de lignes
 	:return: la liste contenant les données formatées
-	""" 
+	"""
 	ligne1 = [e.balise_xml(s) for s in liste[0]]
 	liste.pop(0)
 
