@@ -1,4 +1,4 @@
-site web ici
+REQUETES XQUERY :
 
 let $a :=(sum(//annee[@id="2004"]/logement/nb_par_type_logement/Nombre_total_de_logements_finances/text()))
 return $a
@@ -6,8 +6,9 @@ return $a
 
 let $a :=(sum(//qp/C_CAINSEE[text() = '75111']))
 return $a
-(pour qp)
 
+count(//qp/C_CAINSEE[text()="75110"])
+(pour qp)
 
 count(//annee[@id='2008']/logement/localisation/Arrondissements[text()='20'])
 

@@ -14,5 +14,5 @@ Il s'agissait d'explorer une thématique précise en exploitant des données str
 - script : contient les scripts Python qui permettent de formater les données
 - xml : contient les données formatées en XML
 - grammaire : contient les grammaires DTD et RelaxNG de chaque fichier XML
-- transformation : contient les fichiers XML et XSLT qui serviront à créer le site Web final
+- transformation : contient les fichiers XML et XSLT qui serviront à créer le site Web final (via SAXON)
 - web : contient les fichiers HTML, CSS, et JS constituant le site Web
