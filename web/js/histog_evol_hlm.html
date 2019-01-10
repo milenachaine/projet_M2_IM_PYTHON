@@ -1,9 +1,10 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <title>Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});  
+      google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawStuff);
 
       function drawStuff() {
@@ -36,14 +37,14 @@
             subtitle: 'nombre total de logements financés par nombre d\'interventions' },
           axes: {
             x: {
-              0: { side: 'top', label: ''} 
+              0: { side: 'top', label: ''}
             }
           },
           bar: { groupWidth: "80%" }
         };
 
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-       
+
         chart.draw(data, google.charts.Bar.convertOptions(options));
       };
     </script>

@@ -11,14 +11,14 @@
                 <meta name="keywords" content="" />
                 <meta name="explication" content="" />
                 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-                <link href="projet.css" rel="stylesheet" type="text/css" media="all" />
+                <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all" />
                 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
             </head>
             <body>
                 <div id="header-wrapper">
                     <div id="header" class="container">
                         <div id="logo">
-                            <img src="xml_logo.png" alt="logo" class="logo"/>
+                            <img src="../css/xml_logo.png" alt="logo" class="logo"/>
                             <h1><xsl:value-of select="//name"/></h1>
                         </div>
                         <section id = "onglets_milena_ferial">
@@ -63,14 +63,14 @@
                 <meta name="keywords" content="" />
                 <meta name="explication" content="" />
                 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-                <link href="projet.css" rel="stylesheet" type="text/css" media="all" />
+                <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all" />
                 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
             </head>
             <body>
                 <div id="header-wrapper">
                     <div id="header" class="container">
                         <div id="logo">
-                            <img src="xml_logo.png" alt="logo" class="logo"/>
+                            <img src="../css/xml_logo.png" alt="logo" class="logo"/>
                             <h1><xsl:value-of select="//name"/></h1>
                         </div>
                         <section id = "onglets_milena_ferial">
@@ -100,7 +100,7 @@
                 <table style="float:center">
     <tr>
     <th>Données</th>
-    <th>XSL</th> 
+    <th>XSL</th>
     <th>Résultats</th>
   </tr>
   <tr>
@@ -139,7 +139,7 @@
     <!-- Visualisation -->
 <xsl:template match="/visualisation">
   <html xmlns="http://www.w3.org/1999/xhtml">
-    
+
       <head>
         <meta charset="utf-8"/>
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -148,11 +148,11 @@
           <meta name="explication" content="" />
           <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
 
-          <link href="projet.css" rel="stylesheet" type="text/css" media="all" />
+          <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all" />
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});  
+      google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawStuff);
 
       function drawStuff() {
@@ -185,14 +185,14 @@
             subtitle: 'nombre total de logements financés par nombre d\'interventions' },
           axes: {
             x: {
-              0: { side: 'top', label: ''} 
+              0: { side: 'top', label: ''}
             }
           },
           bar: { groupWidth: "60%" }
         };
 
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-       
+
         chart.draw(data, google.charts.Bar.convertOptions(options));
       };
     </script>
@@ -203,7 +203,7 @@
 
                     <div id="header" class="container">
                         <div id="logo">
-                            <img src="xml_logo.png" alt="logo" class="logo"/>
+                            <img src="../css/xml_logo.png" alt="logo" class="logo"/>
                             <h1><xsl:value-of select="//name"/></h1>
                         </div>
                         <section id = "onglets_milena_ferial">
@@ -214,7 +214,7 @@
                           </aside>
                         </section>
                     </div>
-                
+
 
 
 
@@ -222,7 +222,7 @@
                     <div class="content">
                         <xsl:for-each select="//explication">
                             <p><xsl:value-of select="text()"/></p>
-                                
+
                         </xsl:for-each>
 
               <div id="top_x_div" style="width: 900px; height: 700px;"></div>
@@ -248,8 +248,3 @@
 
 
 </xsl:stylesheet>
-
-
-
-
-
