@@ -1,3 +1,0 @@
-milena:output milena$ xmllint --valid --noout  arrondissements.xml
-milena:output milena$ xmllint --noout arrondissements.xml --relaxng arrondissements.rng
-arrondissements.xml validates
