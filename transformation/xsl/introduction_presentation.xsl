@@ -84,7 +84,19 @@
                 </div>
                 <div class="wrapper">
                     <div class="content">
-                        <xsl:for-each select="//explication">
+                        <xsl:for-each select="//about/explication">
+                            <p><xsl:value-of select="text()"/></p>
+                        </xsl:for-each>
+                        <h2>Nettoyage des données</h2>
+                        <xsl:for-each select="//nettoyage/explication">
+                            <p><xsl:value-of select="text()"/></p>
+                        </xsl:for-each>
+                        <h2>Modélisation des données</h2>
+                        <xsl:for-each select="//modelisation/explication">
+                            <p><xsl:value-of select="text()"/></p>
+                        </xsl:for-each>
+                        <h2>Validation des fichiers</h2>
+                        <xsl:for-each select="//validation/explication">
                             <p><xsl:value-of select="text()"/></p>
                         </xsl:for-each>
 
@@ -150,52 +162,6 @@
 
           <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all" />
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawStuff);
-
-      function drawStuff() {
-        var data = new google.visualization.arrayToDataTable([
-          ['Année', 'Moyenne'],
-          ["2001", 40],
-          ["2002", 32],
-          ["2003", 33],
-          ["2004", 26],
-          ["2005", 26],
-          ["2006", 32],
-          ["2007", 23],
-          ["2008", 22],
-          ["2009", 22],
-          ["2010", 25],
-          ["2011", 29],
-          ["2012", 30],
-          ["2013", 34],
-          ["2014", 40],
-          ["2015", 37],
-          ["2016", 43],
-          ["2017", 36]
-        ]);
-
-        var options = {
-          width: 800,
-          legend: { position: 'center' },
-          chart: {
-            title: 'Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017',
-            subtitle: 'nombre total de logements financés par nombre d\'interventions' },
-          axes: {
-            x: {
-              0: { side: 'top', label: ''}
-            }
-          },
-          bar: { groupWidth: "60%" }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      };
-    </script>
   </head>
 
             <body>
@@ -224,7 +190,34 @@
                             <p><xsl:value-of select="text()"/></p>
 
                         </xsl:for-each>
-
+                        <table style="float:center">
+            <tr>
+            <th>Lien</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="../js/carte.html">Répartition des quartiers prioritaires</a></td>
+            <td>Représentation visuelle de la répartition des quartiers prioritaires de la politique de la ville par arrondissement parisien. La taille des cercles correspond au nombre de quartiers.</td>
+          </tr><tr>
+            <td><a href="../js/pie_qp_paris.html">Nombre de quartiers prioritaires parisiens par arrondissements</a></td>
+            <td>Equivalent de la représentation géographique sous forme de graphe.</td>
+            </tr><tr>
+            <td><a href="../js/combo_evol_chro_hlm.html">Catégorie de financement des logements sociaux à Paris : 2010 - 2016</a></td>
+            <td>Analyse de la répartition des catégories des logements financés</td>
+            </tr><tr>
+            <td><a href="../js/histog_evol_hlm.html">Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017</a></td>
+            <td>Analyse du nombre moyen de logements sociaux financés par intervention (une intervention correspondant à un site géographique)</td>
+          </tr><tr>
+            <td><a href="../js/lines_16_18_chrono.html">Évolution chronologique des logements sociaux financés dans les 16e et 18e arrondissements de Paris</a></td>
+            <td>Comparaison du nombre de logements sociaux financés par année dans un arrondissement avec peu de quartiers prioritaires (16ème) et une arrondissement en comportant beaucoup (18ème)</td>
+            </tr><tr>
+            <td><a href="../js/pie_2008_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2008</a></td>
+            <td>Le choix de l'année 2008 s'explique par le fait que c'est l'année durant laquelle il y a eu le moins de financements</td>
+            </tr><tr>
+            <td><a href ="../js/pie_2016_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2016</a></td>
+            <td>Le choix de l'année 2016 s'explique par le fait que c'est l'année durant laquelle il y a eu le plus de financements</td>
+          </tr>
+        </table>
               <div id="top_x_div" style="width: 900px; height: 700px;"></div>
                     </div>
                 </div>

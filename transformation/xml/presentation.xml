@@ -9,12 +9,16 @@
         <explication>Cette page présente le processus que nous avons employé pour rendre nos données exploitables. Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données. </explication>
 
     </about>
-    <titre>Nettoyage des données</titre>
-    <titre>Modélisation des données</titre>
+    <nettoyage>
+    <explication>Pour nettoyer nos données, nous avons défini des fonctions en langage Python3 lors de la transformation en XML dans le but de normaliser les chaînes de caractères afin de pouvoir les utiliser dans le contenu récupéré. Cela consistait notamment par le remplacement de certains caractères par leurs références d’entités html.
+    D’autres fonctions consistaient en la normalisation de chaînes de caractères afin de pouvoir les utiliser comme nom de balise XML. Cela se concrétise par le remplacement des espaces par des "_" ou toute autre ponctuation retrouvée dans les noms de colonnes par le même caractère. Par ailleurs, nous avons remplacé les caractères diacrités par leurs équivalents non diacrités.
+
+    Il faut souligner que le fichier de données initial « hlm_paris.csv » était bruité et que nous avons dû remplacer manuellement avec un éditeur de texte certains  ";" qui, dans ce cas-là, n’étaient pas utilisés comme séparateurs de colonnes (csv) mais comme simples ponctuations. Cet usage faussait les données décalait certaines données dans les mauvaises colonnes. Nous détaillerons plus bas comment nous nous en sommes rendues compte car, comme ça ne concernait que certaines données, il était difficile de remarquer à première vue.</explication></nettoyage>
+    <modelisation>
     <explication>En ce qui concerne le fichier sur les quartiers prioritaires (qp.csv), le script Python correspondant permet d'extraire les quartiers de Paris dans un fichier qui traite toute l'Île-de-France, puis il associe le numéro du quartier (colonne OBJECTID) à l'identifiant de la balise XML qui définit chaque quartier.</explication>
-    <explication>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement principal dans la modélisation est la transformation de la colonne définissant le numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.</explication>
-    <titre>Validation des fichiers</titre>
-    <explication>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier. Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités qui n'étaient pas visibles à l'oeil nu.</explication>
+    <explication>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement principal dans la modélisation est la transformation de la colonne définissant le numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.</explication></modelisation>
+    <validation>
+    <explication>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier. Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités qui n'étaient pas visibles à l'oeil nu.</explication></validation>
     <contact>
       <master nom="Traitement Automatique des Langues">
           <cours intitulé="XML" année="2018-2019"/>

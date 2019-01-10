@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      <title>Milena Chaîne  &amp; Ferial Yahiaoui - XML</title>
+      <meta name="keywords" content=""></meta>
+      <meta name="explication" content=""></meta>
+      <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet"></link>
+      <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all"></link>
+   </head>
+   <body>
+      <div id="header-wrapper">
+         <div id="header" class="container">
+            <div id="logo"><img src="../css/xml_logo.png" alt="logo" class="logo"></img><h1>Présentation des données &amp; résultats</h1>
+            </div>
+            <section id="onglets_milena_ferial">
+               <aside><a href="index.xml">Accueil</a><a href="presentation.xml">Présentation</a><a href="visualisation.xml">Visualisation</a></aside>
+            </section>
+         </div>
+      </div>
+      <div class="wrapper">
+         <div class="content">
+            <p>Cette page présente le processus que nous avons employé pour rendre nos données exploitables.
+               Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données.
+               
+            </p>
+            <h2>Nettoyage des données</h2>
+            <p>Pour nettoyer nos données, nous avons défini des fonctions en langage Python3 lors
+               de la transformation en XML dans le but de normaliser les chaînes de caractères afin
+               de pouvoir les utiliser dans le contenu récupéré. Cela consistait notamment par le
+               remplacement de certains caractères par leurs références d’entités html.
+               D’autres fonctions consistaient en la normalisation de chaînes de caractères afin
+               de pouvoir les utiliser comme nom de balise XML. Cela se concrétise par le remplacement
+               des espaces par des "_" ou toute autre ponctuation retrouvée dans les noms de colonnes
+               par le même caractère. Par ailleurs, nous avons remplacé les caractères diacrités
+               par leurs équivalents non diacrités.
+               
+               Il faut souligner que le fichier de données initial « hlm_paris.csv » était bruité
+               et que nous avons dû remplacer manuellement avec un éditeur de texte certains  ";"
+               qui, dans ce cas-là, n’étaient pas utilisés comme séparateurs de colonnes (csv) mais
+               comme simples ponctuations. Cet usage faussait les données décalait certaines données
+               dans les mauvaises colonnes. Nous détaillerons plus bas comment nous nous en sommes
+               rendues compte car, comme ça ne concernait que certaines données, il était difficile
+               de remarquer à première vue.
+            </p>
+            <h2>Modélisation des données</h2>
+            <p>En ce qui concerne le fichier sur les quartiers prioritaires (qp.csv), le script Python
+               correspondant permet d'extraire les quartiers de Paris dans un fichier qui traite
+               toute l'Île-de-France, puis il associe le numéro du quartier (colonne OBJECTID) à
+               l'identifiant de la balise XML qui définit chaque quartier.
+            </p>
+            <p>En ce qui concerne le fichier sur les arrondissements (arrondissements.csv), le changement
+               principal dans la modélisation est la transformation de la colonne définissant le
+               numéro de l'arrondissement en l'identifiant de l'arrondissement dans la balise.
+            </p>
+            <h2>Validation des fichiers</h2>
+            <p>Nous avons généré une grammaire DTD et une grammaire RelaxNG pour chaque fichier.
+               Elles nous ont permis de contrôler la validité des fichiers et de repérer des irrégularités
+               qui n'étaient pas visibles à l'oeil nu.
+            </p>
+         </div>
+      </div>
+      <h2>Tableau des données </h2>
+      <p>Ce tableau permet d'accéder aux données et résultats.</p>
+      <table style="float:center">
+         <tr>
+            <th>Données</th>
+            <th>XSL</th>
+            <th>Résultats</th>
+         </tr>
+         <tr>
+            <td><a href="../../data/CSV/hlm_paris.csv">HLM_PARIS.CSV</a></td>
+            <td><a href="../../data/CSV/hlm_paris.xsl">HLM_PARIS.XSL</a></td>
+            <td><a href="../../data/CSV/hlm_paris.html">HLM_PARIS.HTML</a></td>
+         </tr>
+         <tr>
+            <td><a href="../../data/CSV/qp.csv">QP_POLITIQUE_DE_LA_VILLE.CSV</a></td>
+            <td><a href="../../data/CSV/qp.xsl">QP_POLITIQUE_DE_LA_VILLE.XSL</a></td>
+            <td><a href="../../data/CSV/qp.xsl">QP_POLITIQUE_DE_LA_VILLE.HTML</a></td>
+         </tr>
+         <tr>
+            <td><a href="../../data/CSV/arrondissements.csv">ARRONDISSEMENTS.CSV</a></td>
+            <td><a href="../../data/CSV/arrondissements.xsl">ARRONDISSEMENTS.XSL</a></td>
+            <td><a href="../../data/CSV/arrondissements.html">ARRONDISSEMENTS.HTML</a></td>
+         </tr>
+      </table>
+      <div id="footer-wrapper">
+         <footer id="footer" class="container">
+            <div class="row">
+               <p class="footer">
+                  Milena Chaîne  &amp; Ferial Yahiaoui - XML
+                  
+               </p>
+               <p class="footer"></p>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
