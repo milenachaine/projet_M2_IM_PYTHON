@@ -24,7 +24,7 @@
   xmlns CDATA #FIXED ''>
 
 <!ELEMENT realisation (Bailleur_social,Numero_Operation,
-                       Mode_de_realisation,Coord_X_LB93,
+                       Mode_de_realisation,
                        Nature_de_programme)>
 <!ATTLIST realisation
   xmlns CDATA #FIXED ''>
@@ -63,10 +63,6 @@
 
 <!ELEMENT Mode_de_realisation (#PCDATA)>
 <!ATTLIST Mode_de_realisation
-  xmlns CDATA #FIXED ''>
-
-<!ELEMENT Coord_X_LB93 (#PCDATA)>
-<!ATTLIST Coord_X_LB93
   xmlns CDATA #FIXED ''>
 
 <!ELEMENT Nature_de_programme (#PCDATA)>

@@ -1,0 +1,39 @@
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        
+        var data = google.visualization.arrayToDataTable([
+          ['Année', 'Nombre de logements PLA I', 'Nombre de logements PLS', 'Nombre de logements PLUS', 'Nombre de logements PLUS CD', 'Moyenne'],
+
+          ['2010',  1969,      1729,         3299,             67,           1766],
+          ['2011',  1716,      1597,        2880,             40,          1558.25],
+          ['2012',  1400,      3007,        1726,             64,           1549.25],
+          ['2013',  1744,      2843,        2564,             0,           1787.75],
+          ['2014',  1955,     1987,         3167,             57,          1791.5],
+          ['2015',  2278,      2377,         2733,             0,          1847],
+          ['2016',  2001,      2539,         2962,             0,          1875.5]
+        ]);
+
+        var options = {
+          title : 'Catégorie de financement des logements sociaux à Paris : 2010 - 2016',
+          vAxis: {title: 'Catégorie de financement'},
+          hAxis: {title: 'Année'},
+          seriesType: 'bars',
+          series: {4: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

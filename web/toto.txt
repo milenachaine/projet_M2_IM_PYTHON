@@ -7,3 +7,9 @@ return $a
 let $a :=(sum(//qp/C_CAINSEE[text() = '75111']))
 return $a
 (pour qp)
+
+
+count(//annee[@id='2008']/logement/localisation/Arrondissements[text()='20'])
+
+(Xquery pour hlm_paris)
+

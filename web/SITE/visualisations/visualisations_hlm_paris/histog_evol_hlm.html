@@ -1,0 +1,54 @@
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});  
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Année', 'Moyenne'],
+          ["2001", 40],
+          ["2002", 32],
+          ["2003", 33],
+          ["2004", 26],
+          ["2005", 26],
+          ["2006", 32],
+          ["2007", 23],
+          ["2008", 22],
+          ["2009", 22],
+          ["2010", 25],
+          ["2011", 29],
+          ["2012", 30],
+          ["2013", 34],
+          ["2014", 40],
+          ["2015", 37],
+          ["2016", 43],
+          ["2017", 36]
+        ]);
+
+        var options = {
+          width: 800,
+          legend: { position: 'center' },
+          chart: {
+            title: 'Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017',
+            subtitle: 'nombre total de logements financés par nombre d\'interventions' },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} 
+            }
+          },
+          bar: { groupWidth: "80%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+       
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+  </head>
+  <body>
+    <div id="top_x_div" style="width: 800px; height: 600px;"></div>
+  </body>
+</html>

@@ -30,7 +30,7 @@
 
 <explication> > Année d’agrément : il s’agit de la décision administrative par laquelle la collectivité compétente donne son accord pour le financement d’une opération de logement social</explication>
 
-<explication>Ce fichier est au format CSV et sa taille est de 787 Ko et comporte 90668 tokens. </explication>
+<explication>Ce fichier est au format CSV et sa taille est de 787 Ko et comporte 90668 tokens. Ses colonnes sont au nombre de 17, nous n'en avons gardé que 15 pour la transformation en XML car les deux dernières colonnes ne nous  </explication>
 
 <explication></explication>
 

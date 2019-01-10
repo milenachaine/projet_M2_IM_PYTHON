@@ -139,7 +139,9 @@
     <!-- Visualisation -->
 <xsl:template match="/visualisation">
   <html xmlns="http://www.w3.org/1999/xhtml">
+    
       <head>
+        <meta charset="utf-8"/>
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
           <title>Milena Chaîne &amp; Ferial Yahiaoui - XML</title>
           <meta name="keywords" content="" />
@@ -147,41 +149,58 @@
           <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
 
           <link href="projet.css" rel="stylesheet" type="text/css" media="all" />
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});  
+      google.charts.setOnLoadCallback(drawStuff);
 
-
-   <!-- cartes -->
-       
-  <script type="text/javascript">
-
-
-      google.charts.load('upcoming', {packages:['map']});
-      google.charts.setOnLoadCallback(drawChart);
-
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Lat', 'Long', 'Name'],
-          [37.4232, -122.0853, 'Work'],
-          [37.4289, -122.1697, 'University'],
-          [37.6153, -122.3900, 'Airport'],
-          [37.4422, -122.1731, 'Shopping']
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Année', 'Moyenne'],
+          ["2001", 40],
+          ["2002", 32],
+          ["2003", 33],
+          ["2004", 26],
+          ["2005", 26],
+          ["2006", 32],
+          ["2007", 23],
+          ["2008", 22],
+          ["2009", 22],
+          ["2010", 25],
+          ["2011", 29],
+          ["2012", 30],
+          ["2013", 34],
+          ["2014", 40],
+          ["2015", 37],
+          ["2016", 43],
+          ["2017", 36]
         ]);
 
-        var map = new google.visualization.Map(document.getElementById('map_div'));
-        map.draw(data, {
-          showTooltip: true,
-          showInfoWindow: true
-        });
-      }
-    </script>
+        var options = {
+          width: 800,
+          legend: { position: 'center' },
+          chart: {
+            title: 'Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris : 2001 - 2017',
+            subtitle: 'nombre total de logements financés par nombre d\'interventions' },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} 
+            }
+          },
+          bar: { groupWidth: "60%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
        
-
-      </head>
-
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+  </head>
 
             <body>
-                <div id="header-wrapper">
+
+
                     <div id="header" class="container">
                         <div id="logo">
                             <img src="xml_logo.png" alt="logo" class="logo"/>
@@ -195,18 +214,18 @@
                           </aside>
                         </section>
                     </div>
-                </div>
+                
+
+
+
                 <div class="wrapper">
                     <div class="content">
                         <xsl:for-each select="//explication">
                             <p><xsl:value-of select="text()"/></p>
                                 
-                              
-
-                                  
-<div id="map_div" style="width: 400px; height: 300px"></div>
-  
                         </xsl:for-each>
+
+              <div id="top_x_div" style="width: 900px; height: 700px;"></div>
                     </div>
                 </div>
                 <div id ="footer-wrapper">
