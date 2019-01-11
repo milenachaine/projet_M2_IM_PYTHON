@@ -129,23 +129,23 @@
                 <table style="float:center">
     <tr>
     <th>Données</th>
-    <th>XSL</th>
+    <th>Grammaires</th>
     <th>Résultats</th>
   </tr>
   <tr>
     <td><a href="../../data/CSV/hlm_paris.csv">HLM_PARIS.CSV</a></td>
-    <td><a href="../../data/CSV/hlm_paris.xsl">HLM_PARIS.XSL</a></td>
-    <td><a href="../../data/CSV/hlm_paris.html">HLM_PARIS.HTML</a></td>
+    <td><a href="../../grammaire/hlm_paris/auto_hlm_paris.dtd">AUTO_HLM_PARIS.DTD</a> <a href="../../grammaire/hlm_paris/auto_hlm_paris.rng">AUTO_HLM_PARIS.RNG</a> <a href="../../grammaire/hlm_paris/hlm_paris.dtd">HLM_PARIS.DTD</a> <a href="../../grammaire/hlm_paris/hlm_paris.rng">HLM_PARIS.RNG</a></td>
+    <td><a href="../../xml/hlm_paris.xml">HLM_PARIS.XML</a></td>
   </tr>
   <tr>
     <td><a href="../../data/CSV/qp.csv">QP_POLITIQUE_DE_LA_VILLE.CSV</a></td>
-    <td><a href="../../data/CSV/qp.xsl">QP_POLITIQUE_DE_LA_VILLE.XSL</a></td>
-    <td><a href="../../data/CSV/qp.xsl">QP_POLITIQUE_DE_LA_VILLE.HTML</a></td>
+    <td><a href="../../grammaire/qp/qp.dtd">QP.DTD</a> <a href="../../grammaire/qp/qp.rng">QP.RNG</a></td>
+    <td><a href="../../xml/qp.xml">QP_POLITIQUE_DE_LA_VILLE.XML</a></td>
   </tr>
   <tr>
     <td><a href="../../data/CSV/arrondissements.csv">ARRONDISSEMENTS.CSV</a></td>
-    <td><a href="../../data/CSV/arrondissements.xsl">ARRONDISSEMENTS.XSL</a></td>
-    <td><a href="../../data/CSV/arrondissements.html">ARRONDISSEMENTS.HTML</a></td>
+    <td><a href="../../grammaire/arrondissements/arrondissements.dtd">ARRONDISSEMENT.DTD</a> <a href="../../grammaire/arrondissements/arrondissements.rng">ARRONDISSEMENT.RNG</a></td>
+    <td><a href="../../xml/arrondissements.xml">ARRONDISSEMENTS.XML</a></td>
   </tr>
 </table>
 
