@@ -1,0 +1,47 @@
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Évolution chronologique des logements sociaux financés dans les 16e et 18e arrondissements de Paris</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Année', '16e arrondissement','18e arrondissement'],
+        ['2001',  310, 211],
+        ['2002',  73, 728],
+        ['2003',  49,   209],
+        ['2004',  63, 359],
+        ['2005',  2, 768],
+        ['2006',   48, 425],
+        ['2007',   266, 684],
+        ['2008',  55, 648],
+        ['2009',  318, 306],
+        ['2010', 110, 667],
+        ['2011',  240, 257],
+        ['2012',  53,  258],
+        ['2013',  245,  745],
+        ['2014',  1624, 900],
+        ['2015',  479, 361],
+        ['2016',  29,  283],
+        ['2017',  140,  320]
+      ]);
+
+var options = {
+          title: 'Évolution chronologique des logements sociaux financés dans les 16e et 18e arrondissements de Paris',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 1500px; height: 700px"></div>
+</body>
+</html>

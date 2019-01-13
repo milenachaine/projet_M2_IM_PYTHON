@@ -1,5 +1,7 @@
 # contexte : github.com/(feryah/projet_M2_IM_XML|milenachaine/projet_M2_IM_PYTHON)
+# Milena Chaîne / Ferial Yahiaoui
 # module de fonctions liées à l'extraction et au formatage de fichiers CSV en XML
+# il est utilisé par chaque programme qui transforme un fichier CSV en fichier XML
 
 import re
 import sys
@@ -54,7 +56,7 @@ def balise_xml(balise):
 
 def contenu_balise(cont):
 	"""
-	normalise une chaîne de caractères afin de pouvoir l'utiliser comme contenu de balise et rendre le fichier xml valide
+	normalise une chaîne de caractères afin de pouvoir l'utiliser comme contenu et rendre le fichier xml valide
 	remplace certains caractères par leurs références d'entité. Exemple : & --> &amp;
 	:param balise: une chaîne de caractères
 	:return: cette chaîne normalisée
@@ -160,7 +162,7 @@ def hlm_paris_xml(liste):
 	la première ligne est traitée à part pour récupérer les noms de balise
 	:param liste: liste de lignes
 	:return: la liste contenant les données formatées
-	""" 
+	"""
 	ligne1 = [e.balise_xml(s) for s in liste[0]]
 	liste.pop(0)
 
@@ -168,19 +170,15 @@ def hlm_paris_xml(liste):
 
 	fichier_XML=[]
 
-
 	compteur_log = 1
 
 	for ligne in liste:
 
-
 		fichier_XML.append("\t<annee id=\"{}\">".format(ligne[4]))
 
-
-		fichier_XML.append("\t\t<logements id=\"{}\">".format(compteur_log))
+		fichier_XML.append("\t\t<logement id=\"{}\">".format(compteur_log))
 		compteur_log += 1
 
-	
 		fichier_XML.append("\t\t\t<localisation>")
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[0], e.contenu_balise(ligne[0])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[1], e.contenu_balise(ligne[1])))
@@ -201,17 +199,11 @@ def hlm_paris_xml(liste):
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[5], e.contenu_balise(ligne[5])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[2], e.contenu_balise(ligne[2])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[11], e.contenu_balise(ligne[11])))
-		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[15], e.contenu_balise(ligne[15])))
 		fichier_XML.append("\t\t\t\t<{0}>{1}</{0}>".format(ligne1[14], e.contenu_balise(ligne[14])))
 		fichier_XML.append("\t\t\t</realisation>")
 
-
-		fichier_XML.append("\t\t</logements>")
+		fichier_XML.append("\t\t</logement>")
 
 		fichier_XML.append("\t</annee>")
 
-
-		
-
-   
 	return fichier_XML

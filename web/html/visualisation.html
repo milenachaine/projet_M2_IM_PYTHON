@@ -1,0 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="utf-8"></meta>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      <title>Milena Chaîne &amp; Ferial Yahiaoui - XML</title>
+      <meta name="keywords" content=""></meta>
+      <meta name="explication" content=""></meta>
+      <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet"></link>
+      <link href="../css/projet.css" rel="stylesheet" type="text/css" media="all"></link>
+   </head>
+   <body>
+      <div id="header" class="container">
+         <div id="logo"><img src="../css/xml_logo.png" alt="logo" class="logo"></img><h1>Visualisation des données </h1>
+         </div>
+         <section id="onglets_milena_ferial">
+            <aside><a href="index.html">Accueil</a><a href="presentation.html">Présentation</a><a href="visualisation.html">Visualisation</a></aside>
+         </section>
+      </div>
+      <div class="wrapper">
+         <div class="content">
+            <p>Nous avons choisi d'utiliser Google Maps et Google Charts pour la représentation visuelle
+               de nos données. Ce choix n'a pas été sans complications ultérieures. Chacune des visualisations
+               présentées ci-dessous a pour but de mettre en valeur soit l'évolution chronologique,
+               soit la répartition géographique des problématiques liées au logement social parisien.
+               Nous avons effectué des requêtes XQuery sur le fichier XML pour obtenir des données
+               intermédiaires (moyenne, etc.). Ces requêtes sont accessibles dans un fichier nommé
+               xquery.txt, dans le répertoire xml.
+            </p>
+            <p>L'utilisation de l'API Google Maps s'est révélée complexe, tant par ses restrictions
+               au niveau des clés API que des restrictions techniques : il était notamment très difficile
+               d'exploiter les données de géolocalisation présentes dans les fichiers, d'une part
+               parce qu'il était complexe de parser du XML, et d'autre part parce que le format des
+               données de géolocalisation qu'utilise Google Maps est différent de celui qui était
+               employé dans les fichiers.
+            </p>
+            <table style="float:center">
+               <tr>
+                  <th>Lien</th>
+                  <th>Description</th>
+               </tr>
+               <tr>
+                  <td><a href="../js/carte.html">Répartition des quartiers prioritaires</a></td>
+                  <td>Représentation visuelle de la répartition des quartiers prioritaires de la politique
+                     de la ville par arrondissement parisien. La taille des cercles correspond au nombre
+                     de quartiers.
+                  </td>
+               </tr>
+               <tr>
+                  <td><a href="../js/pie_qp_paris.html">Nombre de quartiers prioritaires parisiens par arrondissement</a></td>
+                  <td>Equivalent de la représentation géographique sous forme de graphe.</td>
+               </tr>
+               <tr>
+                  <td><a href="../js/combo_evol_chro_hlm.html">Catégorie de financement des logements sociaux à Paris : 2010 - 2016</a></td>
+                  <td>Analyse de la répartition des catégories des logements financés.</td>
+               </tr>
+               <tr>
+                  <td><a href="../js/histog_evol_hlm.html">Évolution chronologique du nombre de logements sociaux financés dans la ville de Paris
+                        : 2001 - 2017</a></td>
+                  <td>Analyse du nombre moyen de logements sociaux financés par intervention (une intervention
+                     correspondant à un site géographique).
+                  </td>
+               </tr>
+               <tr>
+                  <td><a href="../js/lines_16_18_chrono.html">Évolution chronologique des logements sociaux financés dans les 16e et 18e arrondissements
+                        de Paris</a></td>
+                  <td>Comparaison du nombre de logements sociaux financés par année dans un arrondissement
+                     avec peu de quartiers prioritaires (16ème) et un arrondissement en comportant beaucoup
+                     (18ème).
+                  </td>
+               </tr>
+               <tr>
+                  <td><a href="../js/pie_2008_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2008</a></td>
+                  <td>Le choix de l'année 2008 s'explique par le fait que c'est l'année durant laquelle
+                     il y a eu le moins de financements.
+                  </td>
+               </tr>
+               <tr>
+                  <td><a href="../js/pie_2016_arr_hlm.html">Logements sociaux financés à Paris par arrondissement pour l'année 2016</a></td>
+                  <td>Le choix de l'année 2016 s'explique par le fait que c'est l'année durant laquelle
+                     il y a eu le plus de financements.
+                  </td>
+               </tr>
+            </table>
+            <div id="top_x_div" style="width: 900px; height: 700px;"></div>
+         </div>
+      </div>
+      <div id="footer-wrapper">
+         <footer id="footer" class="container">
+            <div class="row">
+               <p class="footer">
+                  Milena Chaîne  &amp; Ferial Yahiaoui - XML
+                  
+               </p>
+               <p class="footer"></p>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
