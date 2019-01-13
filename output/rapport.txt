@@ -1,0 +1,6 @@
+FICHIERS XML :
+  - arrondissements.xml (extrait de arrondissements.csv)
+  - qp.xml (extrait de qp.csv)
+  - hlm_paris.xml (extrait de hlm_paris.csv)
+
+La modélisation et le nettoyage des données contenues dans les fichiers sont décrits dans le site web (section 'Présentation').

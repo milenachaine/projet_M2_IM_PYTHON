@@ -2,7 +2,7 @@
 ## Contexte
 Ce projet a été réalisé dans le cadre du [master TAL à l'INALCO](http://www.tal.univ-paris3.fr/plurital/) par [Milena Chaîne](http://www.github.com/milenachaine) et [Ferial Yahiaoui](http://www.linkedin.com/in/ferial-yahiaoui-nlp19/).
 
-Il s'agissait d'explorer une thématique précise en exploitant des données structurées au format XML, puis de présenter une visualisation de ces données dans un site Web statique. Nous avons choisi de nous intéresser à la problématique du logement social sur Paris, et avons choisi d'exploiter des données créées par la Mairie de Paris, ainsi que la région Île-de-France.
+Nous avons choisi de nous intéresser à la problématique du logement social sur Paris, et pour ce faire, nous avons exploité des données au format CSV créées par la Mairie de Paris, ainsi que la région Île-de-France. Ces données sont des données publiques françaises disponibles dans le cadre de l'ouverture des données (Open Data), ayant pour but de faciliter leur réutilisation par d'autres acteurs que l'administration française.
 
 ## Sources des données exploitées
 - [Logements sociaux financés à Paris (2001-2017)](http://www.data.gouv.fr/fr/datasets/logements-sociaux-finances-a-paris/)
@@ -11,8 +11,7 @@ Il s'agissait d'explorer une thématique précise en exploitant des données str
 
 ## Arborescence du projet
 - data : contient les données brutes (au format CSV)
-- script : contient les scripts Python qui permettent de formater les données
-- xml : contient les données formatées en XML
-- grammaire : contient les grammaires DTD et RelaxNG de chaque fichier XML
-- transformation : contient les fichiers XML et XSLT qui serviront à créer le site Web final (via SAXON)
-- web : contient les fichiers HTML, CSS, et JS constituant le site Web
+- scripts : contient les scripts Python qui ont permis de formater les données
+- output : contient les données formatées en XML
+- grammaires : contient les grammaires DTD et RelaxNG de chaque fichier XML
+- web : contient les fichiers HTML, CSS, et JS constituant le site Web final
