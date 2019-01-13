@@ -1,0 +1,72 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT QP (qp)+>
+<!ATTLIST QP
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT qp (Geo_Point,Geo_Shape,C_NQPV,L_NQPV,C_CAINSEE,NOM_COM,C_DEP,
+              Departement,D_MAJ,Nature_du_secteur,B_ETAT,B_VP,B_NPNRU,
+              SHAPE_Leng,SHAPE_Area)>
+<!ATTLIST qp
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT Geo_Point (#PCDATA)>
+<!ATTLIST Geo_Point
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Geo_Shape (#PCDATA)>
+<!ATTLIST Geo_Shape
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT C_NQPV (#PCDATA)>
+<!ATTLIST C_NQPV
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT L_NQPV (#PCDATA)>
+<!ATTLIST L_NQPV
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT C_CAINSEE (#PCDATA)>
+<!ATTLIST C_CAINSEE
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT NOM_COM (#PCDATA)>
+<!ATTLIST NOM_COM
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT C_DEP (#PCDATA)>
+<!ATTLIST C_DEP
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Departement (#PCDATA)>
+<!ATTLIST Departement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT D_MAJ (#PCDATA)>
+<!ATTLIST D_MAJ
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Nature_du_secteur (#PCDATA)>
+<!ATTLIST Nature_du_secteur
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT B_ETAT (#PCDATA)>
+<!ATTLIST B_ETAT
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT B_VP (#PCDATA)>
+<!ATTLIST B_VP
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT B_NPNRU (#PCDATA)>
+<!ATTLIST B_NPNRU
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT SHAPE_Leng (#PCDATA)>
+<!ATTLIST SHAPE_Leng
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT SHAPE_Area (#PCDATA)>
+<!ATTLIST SHAPE_Area
+  xmlns CDATA #FIXED ''>

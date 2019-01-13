@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="QP">
+      <oneOrMore>
+        <element name="qp">
+          <attribute name="id">
+            <data type="integer"/>
+          </attribute>
+          <element name="Geo_Point">
+            <text/>
+          </element>
+          <element name="Geo_Shape">
+            <text/>
+          </element>
+          <element name="C_NQPV">
+            <text/>
+          </element>
+          <element name="L_NQPV">
+            <text/>
+          </element>
+          <element name="C_CAINSEE">
+            <data type="integer"/>
+          </element>
+          <element name="NOM_COM">
+            <data type="NCName"/>
+          </element>
+          <element name="C_DEP">
+            <data type="integer"/>
+          </element>
+          <element name="Departement">
+            <data type="NCName"/>
+          </element>
+          <element name="D_MAJ">
+            <data type="dateTime"/>
+          </element>
+          <element name="Nature_du_secteur">
+            <data type="NCName"/>
+          </element>
+          <element name="B_ETAT">
+            <data type="NCName"/>
+          </element>
+          <element name="B_VP">
+            <data type="NCName"/>
+          </element>
+          <element name="B_NPNRU">
+            <data type="NCName"/>
+          </element>
+          <element name="SHAPE_Leng">
+            <data type="decimal"/>
+          </element>
+          <element name="SHAPE_Area">
+            <data type="decimal"/>
+          </element>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+</grammar>
