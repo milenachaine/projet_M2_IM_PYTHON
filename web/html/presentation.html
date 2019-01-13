@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-      <title>Milena Chaîne  &amp; Ferial Yahiaoui - XML</title>
+      <title>Milena Chaîne  &amp; Ferial Yahiaoui - Python</title>
       <meta name="keywords" content=""></meta>
       <meta name="explication" content=""></meta>
       <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet"></link>
@@ -10,7 +10,7 @@
    <body>
       <div id="header-wrapper">
          <div id="header" class="container">
-            <div id="logo"><img src="../css/xml_logo.png" alt="logo" class="logo"></img><h1>Présentation des données &amp; résultats</h1>
+            <div id="logo"><img src="../css/logo.png" alt="logo" class="logo"></img><h1>Présentation des données &amp; résultats</h1>
             </div>
             <section id="onglets_milena_ferial">
                <aside><a href="index.html">Accueil</a><a href="presentation.html">Présentation</a><a href="visualisation.html">Visualisation</a></aside>
@@ -24,7 +24,7 @@
                   <td class="table">
                      <p>Cette page présente le processus que nous avons employé pour rendre nos données exploitables.
                         Nous avons utilisé plusieurs scripts Python pour transformer les fichiers de données.
-                        
+
                      </p>
                   </td>
                </tr>
@@ -42,7 +42,7 @@
                         des espaces par des "_" ou toute autre ponctuation retrouvée dans les noms de colonnes
                         par le même caractère. Par ailleurs, nous avons remplacé les caractères diacrités
                         par leurs équivalents non diacrités.
-                        
+
                         Il faut souligner que le fichier de données initial « hlm_paris.csv » était bruité
                         et que nous avons dû remplacer manuellement avec un éditeur de texte certains  ";"
                         qui, dans ce cas-là, n’étaient pas utilisés comme séparateurs de colonnes (csv) mais
@@ -50,7 +50,7 @@
                         dans les mauvaises colonnes. Nous détaillerons plus bas (cf.Grammaire) comment nous
                         nous en sommes rendues compte car, comme ça ne concernait que certaines données, il
                         était difficile de remarquer à première vue.
-                        
+
                         Pour plus de détails, les scripts sont commentés et contiennent les informations nécessaires.
                      </p>
                   </td>
@@ -74,11 +74,11 @@
                         colonnes car elle n’était pas pertinente pour notre travail. Par ailleurs, nous avons
                         créé des balises afin de contenir les noms de balises extraits à partir des noms de
                         colonnes. Ces balises sont :
-                        &lt;annee id="20XX"&gt;  qui  récupère comme identifiant l’année de financement  et    
-                        qui contient la balise &lt;logement id="X"&gt;  qui elle-même contient &lt;localisation&gt;  
-                        qui comprend les 4 balises extraites des des noms de colonnes représentant les   
+                        &lt;annee id="20XX"&gt;  qui  récupère comme identifiant l’année de financement  et
+                        qui contient la balise &lt;logement id="X"&gt;  qui elle-même contient &lt;localisation&gt;
+                        qui comprend les 4 balises extraites des des noms de colonnes représentant les
                         informations sur la géolocalisation, l’adresse et l’arrondissement.
-                        
+
                         Au même niveau de &lt;localisation&gt;, il y a les deux balises &lt;nb_par_type_logement&gt; ainsi
                         que &lt;realisation&gt;. La première récupère les balises extraites des noms de colonnes
                         et le contenu concernant le détail sur le nombre de logements sociaux financés tandis
@@ -150,8 +150,7 @@
          <footer id="footer" class="container">
             <div class="row">
                <p class="footer">
-                  Milena Chaîne  &amp; Ferial Yahiaoui - XML
-                  
+                  Milena Chaîne  &amp; Ferial Yahiaoui - Python
                </p>
                <p class="footer"></p>
             </div>
