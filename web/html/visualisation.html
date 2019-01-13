@@ -18,14 +18,26 @@
       </div>
       <div class="wrapper">
          <div class="content">
+           <table>
+             <tr>
+               <td class="table">
             <p>Nous avons choisi d'utiliser Google Maps et Google Charts pour la représentation visuelle
                de nos données. Ce choix n'a pas été sans complications ultérieures. Chacune des visualisations
                présentées ci-dessous a pour but de mettre en valeur soit l'évolution chronologique,
                soit la répartition géographique des problématiques liées au logement social parisien.
-               Nous avons effectué des requêtes XQuery sur le fichier XML pour obtenir des données
-               intermédiaires (moyenne, etc.). Ces requêtes sont accessibles dans un fichier nommé
-               xquery.txt, dans le répertoire xml.
+               Nous avons effectué des requêtes XQuery sur les fichiers XML pour obtenir des données
+               intermédiaires (moyenne, etc.). Voici des exemples du type de requêtes effectuées :
             </p>
+            <ul><li><code>let $a :=(sum(//annee[@id="2004"]/logement/nb_par_type_logement/Nombre_total_de_logements_finances/text()))
+            return $a</code></li>
+            <li><code>let $a :=(sum(//qp/C_CAINSEE[text() = '75111']))
+            return $a</code></li>
+            <li><code>count(//qp/C_CAINSEE[text()="75110"])</code></li>
+                        <li><code>count(//annee[@id='2008']/logement/localisation/Arrondissements[text()='20'])
+</code></li>
+<li><code>sum(//annee[@id="2015"]/logement/localisation/Arrondissements[text()="18"]/../../nb_par_type_logement/Nombre_total_de_logements_finances/text())
+</code></li>
+          </ul>
             <p>L'utilisation de l'API Google Maps s'est révélée complexe, tant par ses restrictions
                au niveau des clés API que des restrictions techniques : il était notamment très difficile
                d'exploiter les données de géolocalisation présentes dans les fichiers, d'une part
@@ -33,6 +45,11 @@
                données de géolocalisation qu'utilise Google Maps est différent de celui qui était
                employé dans les fichiers.
             </p>
+            <p>Nous sommes néanmoins satisfaites des visualisations que nous avons pu produire à partir de nos données. Dans le cadre d'un projet de plus grande envergure, il serait possible d'exploiter les données que nous avons produites de façon beaucoup exhaustive pour en tirer plus complexes sur l'évolution de la politique du logement social parisien.</p>
+            <p>Le tableau ci-dessous présente nos différentes visualisations. Elles ont été réalisées en Javascript et intégrées dans des pages HTML.</p>
+          </td>
+        </tr>
+      </table>
             <table style="float:center">
                <tr>
                   <th>Lien</th>
@@ -81,7 +98,6 @@
                   </td>
                </tr>
             </table>
-            <div id="top_x_div" style="width: 900px; height: 700px;"></div>
          </div>
       </div>
       <div id="footer-wrapper">
