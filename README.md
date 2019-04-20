@@ -1,6 +1,6 @@
 # Projet dans le cadre d'un cours de XML et de langages de scripts (Master 2 INALCO, 2018-2019)
 ## Contexte
-Ce projet a été réalisé dans le cadre du [master TAL à l'INALCO](http://www.tal.univ-paris3.fr/plurital/) par [Milena Chaîne](http://www.github.com/milenachaine) et [Ferial Yahiaoui](http://www.linkedin.com/in/ferial-yahiaoui-nlp19/).
+Ce projet a été réalisé dans le cadre du [master TAL à l'INALCO](http://www.tal.univ-paris3.fr/plurital/) par [Milena Chaîne](http://www.github.com/milenachaine) et [Ferial Yahiaoui](http://www.github.com/feryah).
 
 Nous avons choisi de nous intéresser à la problématique du logement social sur Paris, et pour ce faire, nous avons exploité des données au format CSV créées par la Mairie de Paris, ainsi que la région Île-de-France. Ces données sont des données publiques françaises disponibles dans le cadre de l'ouverture des données (Open Data), ayant pour but de faciliter leur réutilisation par d'autres acteurs que l'administration française.
 
