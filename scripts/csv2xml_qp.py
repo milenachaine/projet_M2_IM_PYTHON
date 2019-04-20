@@ -10,7 +10,7 @@
 import sys
 import extraction as e
 
-output = "../xml/qp.xml"
+output = "../output/qp.xml"
 e.usage(sys.argv[0], output) # gestion des arguments/aspect visuel au terminal
 
 data_XML = e.qp_xml(e.lecture_csv(sys.argv[1], ";")) # traitement au format XML

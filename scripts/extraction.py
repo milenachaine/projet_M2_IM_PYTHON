@@ -6,6 +6,7 @@
 import re
 import sys
 import os.path
+import csv
 import extraction as e
 
 # -------- FONCTIONS GENERALES --------
@@ -45,7 +46,6 @@ def balise_xml(balise):
 	:param balise: une chaîne de caractères
 	:return: cette chaîne normalisée
 	"""
-
 	balise = re.sub(r'[\(\,\;\:\.\ ]',"_", balise)
 	if '__' in balise:
 		balise = re.sub(r'__','_', balise)
@@ -61,7 +61,6 @@ def contenu_balise(cont):
 	:param balise: une chaîne de caractères
 	:return: cette chaîne normalisée
 	"""
-
 	cont = re.sub(r'[&]','&amp;', cont) # liste non exhaustive
 	return cont
 
@@ -72,8 +71,10 @@ def lecture_csv(fic, sep):
 	:param sep: séparateur entre chaque futur balise (pour du CSV, ";")
 	:return: liste de toutes les lignes non vides
 	"""
-	with open(fic, "r") as fichier:
-		lignes = [ligne.strip().split(sep) for ligne in fichier]
+	with open(fic) as fichier:
+		csv_fichier = csv.reader(fichier, delimiter=sep)
+		lignes = [ligne for ligne in csv_fichier]
+		assert lignes, "Problème de lecture du fichier CSV"
 	return lignes
 
 
